@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- jquey -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font google Monserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <style>
+    /* .page{
+      display: none;
+    } */
+    body {
+      /* background-color: rgb(42, 42, 42);
+      color: rgb(173, 173, 173); */
+      font-family: "Raleway", sans-serif;
+      /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif; */
+    }
+
+    /* div>input,
+    textarea,
+    span {
+      background-color: rgb(54, 54, 54) !important;
+      color: rgb(152, 151, 151) !important;
+    } */
+  </style>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <ul class="d-flex list-unstyled">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </header>
+  <form>
+    <!--#############################################-->
+    <!--#################à SLIDE 1  ###################-->
+    <div id="container-1" class="slide container pt-5">
+      <h1>slide 1</h1>
+      <p class="pb-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
+        odio consectetur corporis veritatis atque non consequuntur at
+        asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
+        quod, voluptatibus molestias. Necessitatibus, quas in? Veniam
+        accusantium iusto nulla! Dolor ipsam veniam ex iusto maxime recusandae
+        autem. Exercitationem corrupti, beatae nostrum vero quas aliquam neque
+        cupiditate deleniti soluta! Temporibus consequatur, quaerat deserunt
+        itaque corrupti neque perferendis ullam unde architecto consequuntur
+        at provident blanditiis dignissimos, quibusdam facere, aliquid
+        doloribus necessitatibus fuga nemo?
+      </p>
+      <div class="row">
+        <div class="col">
+
+          <!-- tipologia -->
+          <label for="basic-url" class="form-label fw-bold" name="tipologia">Tipologia*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Tipologia" />
+          </div>
+
+          <!-- nome  -->
+          <label for="basic-url" class="form-label fw-bold">Nome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="nome" placeholder="Nome" />
+          </div>
+
+          <!-- benefit -->
+          <label for="benefit" class="form-label fw-bold">Benefit*</label>
+          <!-- si -->
+          <div class="input-group">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="radio" name="benefit" value="si" />
+            </div>
+            <span type="text" class="form-control">
+              si
+            </span>
+          </div>
+          <!-- no -->
+          <div class="input-group mt-1">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="radio" name="benefit" value="no"
+                aria-label="Radio button for following text input" />
+            </div>
+            <span type="text" class="form-control" aria-label="Text input with radio button">
+              no
+            </span>
+          </div>
+
+          <!-- data costruzione  -->
+          <label for="basic-url" class="form-label fw-bold mt-3">
+            Data Costruzione*
+          </label>
+          <div class="input-group mb-3">
+            <input type="date" class="form-control" aria-label="Amount (to the nearest dollar)" />
+          </div>
+
+          <!-- sito web  -->
+          <label for="basic-url" class="form-label fw-bold">Sito web*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
+          </div>
+        </div>
+
+        <!-- ############################################# -->
+        <!--########## PARTE DESTRA  #####################-->
+
+        <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label fw-bold">
+              Logo*
+            </label>
+            <input type="file" class="form-control h-50" id="exampleFormControlInput1" placeholder="" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">
+              Descrizione*
+            </label>
+            <textarea class="form-control" style="height: 200px" id="exampleFormControlTextarea1"></textarea>
+          </div>
+          <!-- numero soci  -->
+          <label for="basic-url" class="form-label fw-bold">
+            Numero Soci*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--#############################################-->
+    <!--#################à SLIDE 2  ###################-->
+    <div id="container-2" class="slide container pt-5">
+      <div class="pb-5">
+        <h1>slide 2</h1>
+      </div>
+
+      <!------------------ SEDE LEGALE  ----------------------->
+      <h3 class="text-uppercase border-bottom border-1">sede operativa</h3>
+      <div class="row">
+        <div class="col">
+          <!-- via -->
+          <label for="basic-url" class="form-label">Via*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Via" />
+          </div>
+
+          <!-- città -->
+          <label for="basic-url" class="form-label">Città*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Via" />
+          </div>
+        </div>
+
+        <!--######### parte destra ####################-->
+        <div class="col">
+          <div class="row">
+            <!-- numero  -->
+            <div class="col">
+              <label for="basic-url" class="form-label">Numero*</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Numero" />
+              </div>
+            </div>
+            <!-- CAP  -->
+            <div class="col">
+              <label for="basic-url" class="form-label">CAP *</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="CAP" />
+              </div>
+            </div>
+          </div>
+
+          <!-- PROVINCIA  -->
+          <label for="basic-url" class="form-label">Provincia *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Provincia" />
+          </div>
+        </div>
+      </div>
+
+      <!--############### SEDE operativa  ###################-->
+      <h3 class="text-uppercase border-bottom border-1 mt-5 mb-3">
+        sede legale
+      </h3>
+
+      <div class="row">
+        <div class="col">
+          <!--# via #-->
+          <label for="basic-url" class="form-label">Via*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Via" />
+          </div>
+
+          <!--# città #-->
+          <label for="basic-url" class="form-label">Città*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="città" />
+          </div>
+        </div>
+
+        <!--######### parte destra ####################-->
+        <div class="col">
+          <div class="row">
+            <!-- numero  -->
+            <div class="col">
+              <label for="basic-url" class="form-label">Numero*</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="numero" />
+              </div>
+            </div>
+            <!-- CAP  -->
+            <div class="col">
+              <label for="basic-url" class="form-label">CAP *</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="CAP" />
+              </div>
+            </div>
+          </div>
+
+          <!-- PROVINCIA  -->
+          <label for="basic-url" class="form-label">Provincia *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Provincia" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--#############################################-->
+    <!--#################à SLIDE 3  ###################-->
+    <div id="container-3" class="slide container pt-5">
+      <div class="pb-5">
+        <h1>slide 3</h1>
+      </div>
+
+      <!-- nome e cognome  -->
+      <div class="row">
+        <div class="col">
+          <!-- via -->
+          <label for="basic-url" class="form-label">Nome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nome" />
+          </div>
+        </div>
+        <div class="col">
+          <!-- città -->
+          <label for="basic-url" class="form-label">Cognome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Cognome" />
+          </div>
+        </div>
+      </div>
+
+      <!-- nome di telefono email  -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">
+            Numero di telefono*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="basic-url" class="form-label">Email *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="CAP" />
+          </div>
+        </div>
+      </div>
+
+      <!-- bottone aggiungi founder -->
+      <div class="text-center py-2">
+        <button id="prev" type="button" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-plus"></i>
+          aggiungi founder
+        </button>
+      </div>
+
+      <!-- nome e cognome  -->
+      <div class="row">
+        <div class="col">
+          <!-- via -->
+          <label for="basic-url" class="form-label">Nome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nome" />
+          </div>
+        </div>
+        <div class="col">
+          <!-- città -->
+          <label for="basic-url" class="form-label">Cognome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Cognome" />
+          </div>
+        </div>
+      </div>
+
+      <!-- nome di telefono email  -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">
+            Numero di telefono*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="basic-url" class="form-label">Email *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="CAP" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--#############################################-->
+    <!--#################à SLIDE 4  ###################-->
+    <div id="container-3" class="slide container pt-5">
+      <div class="pb-5">
+        <h1>slide 4</h1>
+      </div>
+
+      <!-- Numero Dipendenti 22/23  -->
+      <div class="row">
+        <div class="col">
+          <!-- N° Dipendenti 12/2022 -->
+          <label for="basic-url" class="form-label">
+            Numero Dipendenti(Dicembre 2022)*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero Dipendenti 2022" />
+          </div>
+        </div>
+        <div class="col">
+          <!-- N° Dipendenti 12/2023 -->
+          <label for="basic-url" class="form-label">
+            Numero Dipendenti(Dipendenti 2023)*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero Dipendenti 2023" />
+          </div>
+        </div>
+      </div>
+
+      <!-- stato di vita - numero di round raccolti  -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">Stato di Vita*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="basic-url" class="form-label">
+            Numero di round di raccolta *
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="CAP" />
+          </div>
+        </div>
+      </div>
+
+      <!--############### CAPITALE RACCOLTO #############################-->
+      <h3 class="border-bottom border-1 mt-5">CAPITALE RACCOLTO *</h3>
+
+      <!-- founder Investiror -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">Founder*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+        <div class="col">
+          <label for="basic-url" class="form-label">Investiror*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Crowfunding Finanziamenti -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">Crowfunding</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+        <div class="col">
+          <label for="basic-url" class="form-label">Finanziamenti*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Equity value  - Status -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">Equity Value</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+        <div class="col">
+          <label for="basic-url" class="form-label">Status*</label>
+          <div class="input-group mb-3">
+            <select type="text" class="form-control" placeholder="Numero">
+              <option selected value="0">...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- exit -  RevenueY1salses -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">Exit</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="radio" class="" name="exit" value="si" style="width: 1.2rem; height: 1.2rem" />
+            <label for="">Si</label>
+            <input type="radio" class="" name="exit" value="no" style="width: 1.2rem; height: 1.2rem" />
+            <label for="">No</label>
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="basic-url" class="form-label">RevenueY1salses*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Numero" />
+          </div>
+        </div>
+      </div>
+
+      <!-- RevenueY3salses - EbidtaY1 -->
+      <div class="row">
+        <!-- RevenueY3salses -->
+        <div class="col">
+          <label for="basic-url" class="form-label">RevenueY3salses</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="RevenueY3salses" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+
+        <!-- EbidtaY1 -->
+        <div class="col">
+          <label for="basic-url" class="form-label">EbidtaY1</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+      </div>
+
+      <!-- EbidtaY3 - settore industriale -->
+      <div class="row">
+        <!-- RevenueY3salses -->
+        <div class="col">
+          <label for="basic-url" class="form-label">EbidtaY3</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="RevenueY3salses" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+
+        <!-- EbidtaY1 -->
+        <div class="col">
+          <label for="basic-url" class="form-label">
+            Settore Industriale
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+      </div>
+
+      <!-- area/indicazione terapeutica  -->
+      <div class="row">
+        <div class="col">
+          <label for="basic-url" class="form-label">
+            Area/Indicazione terapeutica
+          </label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="RevenueY3salses" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+      </div>
+
+      <!--#################à Prodotto #####################à-->
+      <h3 class="border-bottom border-1 mt-5 mb-4">PRODOTTO *</h3>
+
+      <div class="row">
+        <!-- tipologia di prodotto - se Medtech - se Biotech - se Digital Therapeutics -->
+        <div class="col">
+          <!-- Tipologia di prodotto -->
+          <label for="basic-url" class="form-label">
+            Tipologia di prodotto*
+          </label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="RevenueY3salses" placeholder="Inserisci un valore" />
+          </div>
+
+          <!-- se Medtech -->
+          <label for="basic-url" class="form-label">se Medtech*</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="se-Medtech" placeholder="Inserisci un valore" />
+          </div>
+
+          <!-- se Biotech -->
+          <label for="basic-url" class="form-label">se Biotech*</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="se-Biotech" placeholder="Inserisci un valore" />
+          </div>
+
+          <!-- se Digital Therapeutics -->
+          <label for="basic-url" class="form-label">
+            se Digital Therapeutics*
+          </label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="Digital-Therapeutics" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+
+        <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
+        <div class="col">
+          <label class="form-label">Altro(Specificare)*</label>
+          <textarea class="form-control mb-3" name="altro" id="" rows="4"></textarea>
+
+          <!-- FDA - EMEA  -->
+          <div class="row">
+            <div class="col">
+              <label class="form-label">FDA approved</label>
+              <div>
+                <input type="radio" name="FDA" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">si</label>
+                <input type="radio" name="FDA" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">no</label>
+              </div>
+            </div>
+            <div class="col">
+              <label class="form-label">EMEA approved</label>
+              <div>
+                <input type="radio" name="EMEA" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">si</label>
+                <input type="radio" name="EMEA" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">no</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- FDA - CE -->
+          <div class="row">
+            <div class="col">
+              <label class="form-label">FDA approved</label>
+              <div>
+                <input type="radio" name="FDA" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">si</label>
+                <input type="radio" name="FDA" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">no</label>
+              </div>
+            </div>
+            <div class="col">
+              <label class="form-label">CE approved</label>
+              <div>
+                <input type="radio" name="CE" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">si</label>
+                <input type="radio" name="CE" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label">no</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--################# Market #####################-->
+      <h3 class="border-bottom border-1 mt-5">MARKET *</h3>
+
+      <div class="row">
+        <!-- tipologia di prodotto - se Medtech - se Biotech - se Digital Therapeutics -->
+        <div class="col">
+          <!-- mercato -->
+
+          <div class="input-group mb-3 gap-2">
+            <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
+              class="form-label">US</label>
+            <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
+              class="form-label">EU</label>
+            <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
+              class="form-label">CINA</label>
+          </div>
+
+          <!-- se Medtech -->
+          <label for="basic-url" class="form-label">bo*</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="se-Medtech" placeholder="Inserisci un valore" />
+          </div>
+
+          <!-- se Biotech -->
+          <label for="basic-url" class="form-label">bo*</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="se-Biotech" placeholder="Inserisci un valore" />
+          </div>
+
+          <!-- se Digital Therapeutics -->
+          <label for="basic-url" class="form-label">
+            se Digital Therapeutics*
+          </label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="Digital-Therapeutics" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+
+        <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
+        <div class="col">
+          <label class="form-label">Altro(Specificare)*</label>
+          <textarea class="form-control mb-3" name="altro" id="" rows="4"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
+    <div class="container my-3">
+      <div class="row">
+        <div class="col d-flex justify-content-between">
+          <button id="prev" type="button" class="btn btn-primary btn-lg">
+            indietro
+          </button>
+          <button id="next" type="button" class="btn btn-primary btn-lg">
+            avanti
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script>
+
+
+    $(document).ready(function () {
+      // Nascondi tutti i contenitori tranne il primo
+      $(".slide:not(:nth(0))").hide();
+
+      // Gestione click sul pulsante "Precedente"
+      $("#prev").click(function () {
+        // Trova il contenitore visualizzato
+        var current = $(".slide:visible");
+        // Trova il contenitore precedente
+        var prev = current.prev(".slide");
+        // Se non ci sono contenitori precedenti, ritorna all'ultimo
+        if (prev.length === 0) {
+          prev = $(".slide:last");
+        }
+        // Nascondi il contenitore visualizzato e mostra quello precedente
+        current.hide();
+        prev.show();
+      });
+
+      // Gestione click sul pulsante "Successivo"
+      $("#next").click(function () {
+        // Trova il contenitore visualizzato
+        var current = $(".slide:visible");
+        // Trova il contenitore successivo
+        var next = current.next(".slide");
+        // Se non ci sono contenitori successivi, ritorna al primo
+        if (next.length === 0) {
+          next = $(".slide:first");
+        }
+        // Nascondi il contenitore visualizzato e mostra quello successivo
+        current.hide();
+        next.show();
+      });
+    });
+  </script>
+</body>
+
+</html>
