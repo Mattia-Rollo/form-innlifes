@@ -76,8 +76,8 @@
   <title>Document</title>
 </head>
 
-<body class="pt-5">
-  <header class="container rounded-4 bg-light shadow-lg d-flex align-items-center position-fixed justify-content-center" style="z-index: 10;top: 3rem; left: 50%;transform: translateX(-50%); height: 6rem;">
+<body class="pt-2">
+  <header class="container rounded-4 bg-light shadow-lg d-flex align-items-center position-fixed justify-content-center" style="z-index: 10;top: 8rem; left: 50%;transform: translateX(-50%); height: 6rem;">
     
       <div class="step text-white  bg-blue-mr rounded-circle d-flex " style="height: 2.5vw; width: 2.5vw;">
         <span class="m-auto d-block fw-bolder ">1</span>
@@ -120,6 +120,11 @@
   <form>
     <!--#############################################-->
     <!--#################à SLIDE 1  ###################-->
+
+    <div class="text-center">
+      <img src="logo.png" alt="logo" class="w-25">
+    </div>
+
     <div id="container-1" class="slide container ">
       <h1 class="pt-5 " >slide 1</h1>
       <p class="py-5">
@@ -744,6 +749,7 @@ $(document).ready(function() {
   
 
   $("#prev").click(function() {
+    $('html, body').scrollTop(0);
  
   current = $(".slide:visible");
   
@@ -799,6 +805,7 @@ $(document).ready(function() {
  
   $("#next").click(function() {
     
+    $('html, body').scrollTop(0);
     current = $(".slide:visible");
 
     var next = current.next(".slide");
