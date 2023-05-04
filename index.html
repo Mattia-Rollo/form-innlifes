@@ -8,7 +8,8 @@
 
   <!-- jquey -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,11 +24,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
   <style>
-    
     /* .page{
       display: none;
     } */
@@ -39,7 +40,8 @@
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif; */
     }
-    .bg-light-grey{
+
+    .bg-light-grey {
       background-color: lightgray;
     }
 
@@ -49,74 +51,81 @@
       background-color: rgb(54, 54, 54) !important;
       color: rgb(152, 151, 151) !important;
     } */
-  .debug{
-    border: 1px solid black;
-  }
-  .bg-blue-mr{
-    background-color: #00528c;
-  }
-  .step {
-    transition: all 1s;
-  }
-  .w-7 {
-    width: 7%;
-  }
-  .w-5 {
-    width: 5%;
-  }
-  .w-3 {
-    width: 3%;
-  }
-  button#next:hover , button#prev:hover
-  {
-    background-color: antiquewhite;
-  }
+    .debug {
+      border: 1px solid black;
+    }
+
+    .bg-blue-mr {
+      background-color: #00528c;
+    }
+
+    .step {
+      transition: all 1s;
+    }
+
+    .w-7 {
+      width: 7%;
+    }
+
+    .w-5 {
+      width: 5%;
+    }
+
+    .w-3 {
+      width: 3%;
+    }
+
+    button#next:hover,
+    button#prev:hover {
+      background-color: antiquewhite;
+    }
   </style>
 
   <title>Document</title>
 </head>
 
 <body class="pt-2">
-  <header class="container rounded-4 bg-light shadow-lg d-flex align-items-center position-fixed justify-content-center" style="z-index: 10;top: 8rem; left: 50%;transform: translateX(-50%); height: 6rem;">
-    
-      <div class="step text-white  bg-blue-mr rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder ">1</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2">Informazioni</span>
-      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
-    
-    
-      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder ">2</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2">Headquartes</span>
-      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+  <header class="container rounded-4 bg-light shadow-lg d-flex align-items-center position-fixed justify-content-center"
+    style="z-index: 10;top: 8rem; left: 50%;transform: translateX(-50%); height: 6rem;">
+
+    <div class="step text-white  bg-blue-mr rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder ">1</span>
+    </div>
+    <span class="fs-6 fw-bold ps-2">Informazioni</span>
+    <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
 
 
-      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder ">3</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2">Founders</span>
-      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
-      
-      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder ">4</span>
-      </div>
-      <span class="fs-6 fw-bold ps-2">Other info</span>
-      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+    <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder ">2</span>
+    </div>
+    <span class="fs-6 fw-bold ps-2">Headquartes</span>
+    <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
 
-      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder ">5</span>
-      </div>
-      <span class="fw-bold ps-2 ">Documents</span>
-      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
 
-      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
-        <span class="m-auto d-block fw-bolder "><i class="fa-solid fa-check"></i></i></span>
-      </div>
-      
-      
-    </header>
+    <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder ">3</span>
+    </div>
+    <span class="fs-6 fw-bold ps-2">Founders</span>
+    <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+    <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder ">4</span>
+    </div>
+    <span class="fs-6 fw-bold ps-2">Other info</span>
+    <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+    <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder ">5</span>
+    </div>
+    <span class="fw-bold ps-2 ">Documents</span>
+    <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+    <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 3rem; width: 3rem;">
+      <span class="m-auto d-block fw-bolder "><i class="fa-solid fa-check"></i></i></span>
+    </div>
+
+
+  </header>
   <form>
     <!--#############################################-->
     <!--#################à SLIDE 1  ###################-->
@@ -143,8 +152,8 @@
         <div class="col">
 
           <!-- tipologia -->
-          <label for="tipologia" class="form-label fw-bold" >Tipologia *</label>
-          <select id="tipologia" name="tipologia" class="form-select mb-2"  placeholder="Tipologia ">
+          <label for="tipologia" class="form-label fw-bold">Tipologia *</label>
+          <select id="tipologia" name="tipologia" class="form-select mb-2" placeholder="Tipologia ">
             <option selected>...</option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -160,24 +169,24 @@
           <!-- benefit -->
           <label for="benefit" class="form-label fw-bold">Benefit *</label>
           <!-- si -->
-          <div class="input-group" >
+          <div class="input-group">
             <div class="input-group-text bg-transparent w-100">
-              <input class="form-check-input mt-0" type="radio" name="benefit" value="si" /> 
+              <input class="form-check-input mt-0" type="radio" name="benefit" value="si" />
               <span type="text" class="ms-2">
                 si
               </span>
             </div>
-            
+
           </div>
           <!-- no -->
           <div class="input-group">
             <div class="input-group-text bg-transparent w-100">
               <input class="form-check-input mt-0" type="radio" name="benefit" value="no" />
-              <span type="text" class="ms-2" >
+              <span type="text" class="ms-2">
                 no
               </span>
             </div>
-            
+
           </div>
 
           <!-- data costruzione  -->
@@ -371,7 +380,7 @@
           <i class="fa-solid fa-plus"></i>
           aggiungi founder
         </button>
-       
+
       </div>
 
       <!-- nome e cognome  -->
@@ -723,12 +732,14 @@
     <div class="container my-3">
       <div class="row">
         <div class="col d-flex ">
-          <button id="prev" type="button" class="btn btn-primary rounded-pill" style="background-color: #00528c!important;">
+          <button id="prev" type="button" class="btn btn-primary rounded-pill"
+            style="background-color: #00528c!important;">
             <i class="fa-solid fa-arrow-left me-4"></i> indietro
           </button>
         </div>
         <div class="col d-flex justify-content-end">
-          <button id="next" type="button" class="btn btn-primary rounded-pill " style="background-color: #00528c!important;">
+          <button id="next" type="button" class="btn btn-primary rounded-pill "
+            style="background-color: #00528c!important;">
             avanti <i class="fa-solid fa-arrow-right ms-4"></i>
           </button>
         </div>
@@ -739,119 +750,119 @@
   <script>
 
 
-$(document).ready(function() {
+    $(document).ready(function () {
 
-  $(".slide:not(:first)").hide();
-  $("#prev").hide();
-  
-  // inizilizzo la slide corrrente
-  var current;
-  
-
-  $("#prev").click(function() {
-
-  $('html, body').scrollTop(0);
- 
-  current = $(".slide:visible");
-  
-  console.log(current.index());
-  
-  var prev = current.prev(".slide");
-  
-  current.hide();
-  prev.show();
-
-  current = $(".slide:visible");
-
-  var next = current.next(".slide");
-  // current = $(".slide:visible");
-
-  if(next.index() == 4){
-      $('.step:nth(3)').removeClass('bg-blue-mr');
-      $('.step:nth(3)').addClass('bg-light-grey');
-    }
-    if(next.index() == 3){
-      $('.step:nth(2)').removeClass('bg-blue-mr');
-      $('.step:nth(2)').addClass('bg-light-grey');
-    }
-    if(next.index() == 2){
-      $('.step:nth(1)').removeClass('bg-blue-mr');
-      $('.step:nth(1)').addClass('bg-light-grey');
-    }
-  if (prev.prev('.slide').length === 0 ) {
-    // prev = $(".slide:last");
-    $("#prev").hide();
-    // $("#next").hide();
-  }
-  
-  if (prev.next(".slide").length !== 0) {
-    $("#next").show();
-  }
-  // if(current.next('.slide').index() == 1){
-  //     $('.step:nth(1)').removeClass('bg-secondary');
-  //     $('.step:nth(1)').css("background-color", "#00528c");
-  //   }
-  //   if(current.index() == 2){
-  //     $('.step:nth(2)').removeClass('bg-secondary');
-  //     $('.step:nth(2)').css("background-color", "#00528c");
-  //   }
-  //   if(current.index() == 3){
-  //     $('.step:nth(3)').removeClass('bg-secondary');
-  //     $('.step:nth(3)').css("background-color", "#00528c");
-  //   }
-  
- 
-  
-});
-
-  
- 
-  $("#next").click(function() {
-    
-    $('html, body').scrollTop(0);
-    current = $(".slide:visible");
-    console.log(current.index());
-    var next = current.next(".slide");
-
-
-    current.hide();
-    next.show();
-
-
-    current = $(".slide:visible");
-    console.log(current.index());
-    
-    if(current.index() == 2){
-      $('.step:nth(1)').removeClass('bg-light-grey');
-      $('.step:nth(1)').addClass('bg-blue-mr');
-    }
-    if(current.index() == 3){
-      $('.step:nth(2)').removeClass('bg-light-grey');
-      $('.step:nth(2)').addClass('bg-blue-mr');
-    }
-    if(current.index() == 4){
-      $('.step:nth(3)').removeClass('bg-light-grey');
-      $('.step:nth(3)').addClass('bg-blue-mr');
-    }
-
-
-    if (next.length === 0) {
-      next = $(".slide:first");
-   
+      $(".slide:not(:first)").hide();
       $("#prev").hide();
-    }
-    
-    if (next.prev(".slide").length !== 0) {
-      $("#prev").show();
-    }
-   
-    
-  
-    if (next.next(".slide").length === 0) {
-      $("#next").hide();
-    }
-  });
-});
+
+      // inizilizzo la slide corrrente
+      var current;
+
+
+      $("#prev").click(function () {
+
+        $('html, body').scrollTop(0);
+
+        current = $(".slide:visible");
+
+        console.log(current.index());
+
+        var prev = current.prev(".slide");
+
+        current.hide();
+        prev.fadeIn('slow');
+
+        current = $(".slide:visible");
+
+        var next = current.next(".slide");
+        // current = $(".slide:visible");
+
+        if (next.index() == 4) {
+          $('.step:nth(3)').removeClass('bg-blue-mr');
+          $('.step:nth(3)').addClass('bg-light-grey');
+        }
+        if (next.index() == 3) {
+          $('.step:nth(2)').removeClass('bg-blue-mr');
+          $('.step:nth(2)').addClass('bg-light-grey');
+        }
+        if (next.index() == 2) {
+          $('.step:nth(1)').removeClass('bg-blue-mr');
+          $('.step:nth(1)').addClass('bg-light-grey');
+        }
+        if (prev.prev('.slide').length === 0) {
+          // prev = $(".slide:last");
+          $("#prev").hide();
+          // $("#next").hide();
+        }
+
+        if (prev.next(".slide").length !== 0) {
+          $("#next").show();
+        }
+        // if(current.next('.slide').index() == 1){
+        //     $('.step:nth(1)').removeClass('bg-secondary');
+        //     $('.step:nth(1)').css("background-color", "#00528c");
+        //   }
+        //   if(current.index() == 2){
+        //     $('.step:nth(2)').removeClass('bg-secondary');
+        //     $('.step:nth(2)').css("background-color", "#00528c");
+        //   }
+        //   if(current.index() == 3){
+        //     $('.step:nth(3)').removeClass('bg-secondary');
+        //     $('.step:nth(3)').css("background-color", "#00528c");
+        //   }
+
+
+
+      });
+
+
+
+      $("#next").click(function () {
+
+        $('html, body').scrollTop(0);
+        current = $(".slide:visible");
+        console.log(current.index());
+        var next = current.next(".slide");
+
+
+        current.hide();
+        next.fadeIn('slow');
+
+
+        current = $(".slide:visible");
+        console.log(current.index());
+
+        if (current.index() == 2) {
+          $('.step:nth(1)').removeClass('bg-light-grey');
+          $('.step:nth(1)').addClass('bg-blue-mr');
+        }
+        if (current.index() == 3) {
+          $('.step:nth(2)').removeClass('bg-light-grey');
+          $('.step:nth(2)').addClass('bg-blue-mr');
+        }
+        if (current.index() == 4) {
+          $('.step:nth(3)').removeClass('bg-light-grey');
+          $('.step:nth(3)').addClass('bg-blue-mr');
+        }
+
+
+        if (next.length === 0) {
+          next = $(".slide:first");
+
+          $("#prev").hide();
+        }
+
+        if (next.prev(".slide").length !== 0) {
+          $("#prev").show();
+        }
+
+
+
+        if (next.next(".slide").length === 0) {
+          $("#next").hide();
+        }
+      });
+    });
 
   </script>
 </body>
