@@ -8,8 +8,7 @@
 
   <!-- jquey -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,21 +23,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
   <style>
+    
     /* .page{
       display: none;
     } */
     body {
       /* background-color: rgb(42, 42, 42);
       color: rgb(173, 173, 173); */
-      font-family: "Raleway", sans-serif;
+      /* font-family: "Raleway", sans-serif; */
       /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif; */
+    }
+    .bg-light-grey{
+      background-color: lightgray;
     }
 
     /* div>input,
@@ -47,25 +49,80 @@
       background-color: rgb(54, 54, 54) !important;
       color: rgb(152, 151, 151) !important;
     } */
+  .debug{
+    border: 1px solid black;
+  }
+  .bg-blue-mr{
+    background-color: #00528c;
+  }
+  .step {
+    transition: all 1s;
+  }
+  .w-7 {
+    width: 7%;
+  }
+  .w-5 {
+    width: 5%;
+  }
+  .w-3 {
+    width: 3%;
+  }
+  button#next:hover , button#prev:hover
+  {
+    background-color: antiquewhite;
+  }
   </style>
 
   <title>Document</title>
 </head>
 
-<body>
-  <header>
-    <ul class="d-flex list-unstyled">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-  </header>
+<body class="pt-5">
+  <!-- <header class="container rounded-4 bg-light shadow-lg d-flex align-items-center position-fixed justify-content-center" style="z-index: 10;top: 3rem; left: 50%;transform: translateX(-50%); height: 6rem;">
+    
+      <div class="step text-white  bg-blue-mr rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5">1</span>
+      </div>
+      <span class="fs-6 fw-bold ps-2">Informazioni</span>
+      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+    
+    
+      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5">2</span>
+      </div>
+      <span class="fs-6 fw-bold ps-2">Headquartes</span>
+      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+
+      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5">3</span>
+      </div>
+      <span class="fs-6 fw-bold ps-2">Founders</span>
+      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+      
+      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5">4</span>
+      </div>
+      <span class="fs-6 fw-bold ps-2">Other info</span>
+      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5">5</span>
+      </div>
+      <span class="fw-bold ps-2 ">Documents</span>
+      <div class="bg-light-grey mx-2 rounded-3" style="height: .1rem; width: 2vw;"></div>
+
+      <div class="step text-white  bg-light-grey rounded-circle d-flex " style="height: 4vw; width: 4vw;">
+        <span class="m-auto d-block fw-bolder fs-5"><i class="fa-solid fa-check"></i></i></span>
+      </div>
+      
+      
+    </header> -->
   <form>
     <!--#############################################-->
     <!--#################à SLIDE 1  ###################-->
-    <div id="container-1" class="slide container pt-5">
-      <h1>slide 1</h1>
-      <p class="pb-5">
+    <div id="container-1" class="slide container ">
+      <h1 class="pt-5 " >slide 1</h1>
+      <p class="py-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
         odio consectetur corporis veritatis atque non consequuntur at
         asperiores eligendi quia illum minus dolorem deleniti nam, temporibus
@@ -81,37 +138,41 @@
         <div class="col">
 
           <!-- tipologia -->
-          <label for="basic-url" class="form-label fw-bold" name="tipologia">Tipologia*</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Tipologia" />
-          </div>
+          <label for="tipologia" class="form-label fw-bold" >Tipologia *</label>
+          <select id="tipologia" name="tipologia" class="form-select mb-2"  placeholder="Tipologia ">
+            <option selected>...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
 
           <!-- nome  -->
-          <label for="basic-url" class="form-label fw-bold">Nome*</label>
+          <label for="nome" class="form-label fw-bold">Nome*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="nome" placeholder="Nome" />
+            <input id="nome" type="text" class="form-control" name="nome" placeholder="Nome" />
           </div>
 
           <!-- benefit -->
-          <label for="benefit" class="form-label fw-bold">Benefit*</label>
+          <label for="benefit" class="form-label fw-bold">Benefit *</label>
           <!-- si -->
-          <div class="input-group">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="radio" name="benefit" value="si" />
+          <div class="input-group" >
+            <div class="input-group-text bg-transparent w-100">
+              <input class="form-check-input mt-0" type="radio" name="benefit" value="si" /> 
+              <span type="text" class="ms-2">
+                si
+              </span>
             </div>
-            <span type="text" class="form-control">
-              si
-            </span>
+            
           </div>
           <!-- no -->
-          <div class="input-group mt-1">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="radio" name="benefit" value="no"
-                aria-label="Radio button for following text input" />
+          <div class="input-group">
+            <div class="input-group-text bg-transparent w-100">
+              <input class="form-check-input mt-0" type="radio" name="benefit" value="no" />
+              <span type="text" class="ms-2" >
+                no
+              </span>
             </div>
-            <span type="text" class="form-control" aria-label="Text input with radio button">
-              no
-            </span>
+            
           </div>
 
           <!-- data costruzione  -->
@@ -119,13 +180,13 @@
             Data Costruzione*
           </label>
           <div class="input-group mb-3">
-            <input type="date" class="form-control" aria-label="Amount (to the nearest dollar)" />
+            <input type="date" class="form-control" name="dataCostruzione" />
           </div>
 
           <!-- sito web  -->
-          <label for="basic-url" class="form-label fw-bold">Sito web*</label>
+          <label for="basic-url" class="form-label fw-bold">Sito web *</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
+            <input type="text" name="sitoWeb" class="form-control" placeholder="Sito web" />
           </div>
         </div>
 
@@ -134,16 +195,16 @@
 
         <div class="col">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label fw-bold">
-              Logo*
+            <label for="logo" class="form-label fw-bold">
+              Logo *
             </label>
-            <input type="file" class="form-control h-50" id="exampleFormControlInput1" placeholder="" />
+            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">
-              Descrizione*
+            <label for="descrizione" class="form-label fw-bold">
+              Descrizione *
             </label>
-            <textarea class="form-control" style="height: 200px" id="exampleFormControlTextarea1"></textarea>
+            <textarea class="form-control" style="height: 200px" id="descrizione" name="descrizione"></textarea>
           </div>
           <!-- numero soci  -->
           <label for="basic-url" class="form-label fw-bold">
@@ -301,10 +362,11 @@
 
       <!-- bottone aggiungi founder -->
       <div class="text-center py-2">
-        <button id="prev" type="button" class="btn btn-primary btn-lg">
+        <button type="button" class="btn btn-primary rounded-pill shadow" style="background-color: #00528c!important;">
           <i class="fa-solid fa-plus"></i>
           aggiungi founder
         </button>
+       
       </div>
 
       <!-- nome e cognome  -->
@@ -655,12 +717,14 @@
     <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
     <div class="container my-3">
       <div class="row">
-        <div class="col d-flex justify-content-between">
-          <button id="prev" type="button" class="btn btn-primary btn-lg">
-            indietro
+        <div class="col d-flex ">
+          <button id="prev" type="button" class="btn btn-primary rounded-pill" style="background-color: #00528c!important;">
+            <i class="fa-solid fa-arrow-left me-4"></i> indietro
           </button>
-          <button id="next" type="button" class="btn btn-primary btn-lg">
-            avanti
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button id="next" type="button" class="btn btn-primary rounded-pill " style="background-color: #00528c!important;">
+            avanti <i class="fa-solid fa-arrow-right ms-4"></i>
           </button>
         </div>
       </div>
@@ -670,40 +734,68 @@
   <script>
 
 
-    $(document).ready(function () {
-      // Nascondi tutti i contenitori tranne il primo
-      $(".slide:not(:nth(0))").hide();
+$(document).ready(function() {
 
-      // Gestione click sul pulsante "Precedente"
-      $("#prev").click(function () {
-        // Trova il contenitore visualizzato
-        var current = $(".slide:visible");
-        // Trova il contenitore precedente
-        var prev = current.prev(".slide");
-        // Se non ci sono contenitori precedenti, ritorna all'ultimo
-        if (prev.length === 0) {
-          prev = $(".slide:last");
-        }
-        // Nascondi il contenitore visualizzato e mostra quello precedente
-        current.hide();
-        prev.show();
-      });
+  $(".slide:not(:first)").hide();
+  $("#prev").hide();
+  
+  // inizilizzo la slide corrrente
+  var current;
+  
 
-      // Gestione click sul pulsante "Successivo"
-      $("#next").click(function () {
-        // Trova il contenitore visualizzato
-        var current = $(".slide:visible");
-        // Trova il contenitore successivo
-        var next = current.next(".slide");
-        // Se non ci sono contenitori successivi, ritorna al primo
-        if (next.length === 0) {
-          next = $(".slide:first");
-        }
-        // Nascondi il contenitore visualizzato e mostra quello successivo
-        current.hide();
-        next.show();
-      });
-    });
+  $("#prev").click(function() {
+ 
+  current = $(".slide:visible");
+  
+  var prev = current.prev(".slide");
+  
+  current.hide();
+  prev.show();
+
+  // current = $(".slide:visible");
+
+  if (prev.prev('.slide').length === 0 ) {
+    // prev = $(".slide:last");
+    $("#prev").hide();
+    // $("#next").hide();
+  }
+  
+  if (prev.next(".slide").length !== 0) {
+    $("#next").show();
+  }
+  
+  
+ 
+  
+});
+
+  
+ 
+  $("#next").click(function() {
+    
+    current = $(".slide:visible");
+
+    var next = current.next(".slide");
+
+    if (next.length === 0) {
+      next = $(".slide:first");
+   
+      $("#prev").hide();
+    }
+    
+    if (next.prev(".slide").length !== 0) {
+      $("#prev").show();
+    }
+   
+    current.hide();
+    next.show();
+  
+    if (next.next(".slide").length === 0) {
+      $("#next").hide();
+    }
+  });
+});
+
   </script>
 </body>
 
