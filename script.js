@@ -1,11 +1,11 @@
-$(window).resize(function(){
+// $(window).resize(function(){
 
-    console.log($(window).width()); 
+//     console.log($(window).width()); 
 
-    if ($(window).width() ) {  
+//     if ($(window).width() ) {  
 
-           $('.step').hide();
+//            $('.step').hide();
 
-    }     
+//     }     
 
-});
+// });

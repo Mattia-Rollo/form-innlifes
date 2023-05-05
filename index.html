@@ -175,7 +175,7 @@
         <span id="step-icon-mobile" class=" d-block fw-bolder fs-3 m-auto ">1</span>
       </div>
       <span id="step-title-mobile" class="fs-3 fw-bold ps-2">Informazioni</span>
-      <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div>
+      <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
 
@@ -846,6 +846,27 @@
 
     $(document).ready(function () {
 
+      function setHeaderMobileMenu() {
+        switch (step) {
+          case 1:
+            $('#step-title-mobile').text('Informazioni');
+            break;
+          case 2:
+            $('#step-title-mobile').text('Headquartes');
+            break;
+          case 3:
+            $('#step-title-mobile').text('Founders');
+            break;
+          case 4:
+            $('#step-title-mobile').text('Other info');
+            break;
+          case 5:
+            $('#step-title-mobile').text('Documents');
+            break;
+          default:
+            break;
+        }
+      }
 
 
       $(".slide:not(:first)").hide();
@@ -856,6 +877,11 @@
 
 
       $("#prev").click(function () {
+
+        step--;
+        $('#step-icon-mobile').text(step);
+
+        setHeaderMobileMenu();
 
         //torna in alto al click del pulsante avanti
         $('html, body').scrollTop(0);
@@ -903,7 +929,8 @@
 
       });
 
-
+      let step = 1;
+      $('#step-icon-mobile').text(step);
 
       $("#next").click(function () {
 
@@ -923,11 +950,15 @@
         //riseleziono quella visibile dopo che è cambiata
         current = $(".slide:visible");
 
+        step++;
 
+        $('#step-icon-mobile').text(step);
 
+        setHeaderMobileMenu();
         // applico lo sfondo blu ai numeri step
         if (current.index() == 2) {
-          $('.step-icon-mobile').text('2');
+
+          console.log($('#step-icon-mobile'));
 
 
           $('.step-icon:nth(1)').removeClass('bg-light-grey');
