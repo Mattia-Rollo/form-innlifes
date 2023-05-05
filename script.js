@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(window).resize(function(){
 
-    function resize(){
+    console.log($(window).width()); 
 
-    
-    if ($(window).width() < 560) {
-        $('.step:not(:first)').hide();
-    }
-}
+    if ($(window).width() ) {  
+
+           $('.step').hide();
+
+    }     
 
 });
