@@ -35,7 +35,7 @@
     body {
       /* background-color: rgb(42, 42, 42);
       color: rgb(173, 173, 173); */
-      /* font-family: "Raleway", sans-serif; */
+      font-family: "Raleway", sans-serif;
       /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif; */
@@ -730,7 +730,7 @@
     </div>
 
     <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
-    <div class="container my-3">
+    <div id="controls" class="container my-3">
       <div class="row">
         <div class="col d-flex ">
           <button id="prev" type="button" class="btn btn-primary rounded-pill"
@@ -799,20 +799,6 @@
         if (prev.next(".slide").length !== 0) {
           $("#next").show();
         }
-        // if(current.next('.slide').index() == 1){
-        //     $('.step:nth(1)').removeClass('bg-secondary');
-        //     $('.step:nth(1)').css("background-color", "#00528c");
-        //   }
-        //   if(current.index() == 2){
-        //     $('.step:nth(2)').removeClass('bg-secondary');
-        //     $('.step:nth(2)').css("background-color", "#00528c");
-        //   }
-        //   if(current.index() == 3){
-        //     $('.step:nth(3)').removeClass('bg-secondary');
-        //     $('.step:nth(3)').css("background-color", "#00528c");
-        //   }
-
-
 
       });
 
