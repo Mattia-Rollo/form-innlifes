@@ -178,27 +178,24 @@
       <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
+  <!--!!## logo ##!!-->
+  <!-- mobile -->
+  <div class="text-center d-md-none position-fixed top-0 w-100 py-3 pb-5 py-md-2 pb-md-5 mb-5 "
+    style="z-index: 4; backdrop-filter:  blur(10px);">
+    <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
+      style="height: 3rem;">
+  </div>
 
+  <!-- desktop -->
+  <div class="text-center d-none d-md-block position-fixed top-0 w-100 py-4 mb-5 pb-5"
+    style="z-index: 4; backdrop-filter:  blur(10px);">
+    <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
+      style="width: 17em;">
+  </div>
   <form class="pb-3" action="server.php" method="get">
 
-    <!--!!## logo ##!!-->
-    <div class="text-center d-md-none position-fixed top-0 w-100 py-3 pb-5 py-md-2 pb-md-5 mb-5 "
-      style="z-index: 4; backdrop-filter:  blur(10px);">
-      <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo" class=""
-        style="height: 3rem;">
-    </div>
 
-    <div class="text-center d-none position-fixed top-0 w-100 py-3 py-md-2 pb-md-5 mb-5 "
-      style="z-index: 4; backdrop-filter:  blur(10px);">
-      <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
-        class="w-md-25 w-50">
-    </div>
 
-    <div class="text-center d-none position-fixed top-0 w-100 py-3 py-md-2 pb-md-5 mb-5 "
-      style="z-index: 4; backdrop-filter:  blur(10px);">
-      <img src="https://www.innlifes.com/wp-content/uploads/2023/03/LOGO-INNLIFES@4x-1024x248.png" alt="logo"
-        class="w-md-25 w-50">
-    </div>
     <!--#############################################-->
     <!--#################à SLIDE 1  ###################-->
 
@@ -845,6 +842,7 @@
 
 
     $(document).ready(function () {
+      let step = 1;
 
       function setHeaderMobileMenu() {
         switch (step) {
@@ -904,15 +902,15 @@
         var next = current.next(".slide");
 
         // tolgo lo sfondo blu ai numeri 
-        if (next.index() == 4) {
+        if (current.index() == 2) {
           $('.step-icon:nth(3)').removeClass('bg-blue-mr');
           $('.step-icon:nth(3)').addClass('bg-light-grey');
         }
-        if (next.index() == 3) {
+        if (current.index() == 1) {
           $('.step-icon:nth(2)').removeClass('bg-blue-mr');
           $('.step-icon:nth(2)').addClass('bg-light-grey');
         }
-        if (next.index() == 2) {
+        if (current.index() == 0) {
           $('.step-icon:nth(1)').removeClass('bg-blue-mr');
           $('.step-icon:nth(1)').addClass('bg-light-grey');
         }
@@ -929,7 +927,7 @@
 
       });
 
-      let step = 1;
+
       $('#step-icon-mobile').text(step);
 
       $("#next").click(function () {
@@ -950,25 +948,26 @@
         //riseleziono quella visibile dopo che è cambiata
         current = $(".slide:visible");
 
+        console.log(current);
         step++;
 
         $('#step-icon-mobile').text(step);
 
         setHeaderMobileMenu();
         // applico lo sfondo blu ai numeri step
-        if (current.index() == 2) {
+        if (current.index() == 1) {
 
-          console.log($('#step-icon-mobile'));
+          console.log(current.index());
 
 
           $('.step-icon:nth(1)').removeClass('bg-light-grey');
           $('.step-icon:nth(1)').addClass('bg-blue-mr');
         }
-        if (current.index() == 3) {
+        if (current.index() == 2) {
           $('.step-icon:nth(2)').removeClass('bg-light-grey');
           $('.step-icon:nth(2)').addClass('bg-blue-mr');
         }
-        if (current.index() == 4) {
+        if (current.index() == 3) {
           $('.step-icon:nth(3)').removeClass('bg-light-grey');
           $('.step-icon:nth(3)').addClass('bg-blue-mr');
         }
