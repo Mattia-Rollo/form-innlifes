@@ -1,7 +1,9 @@
 /* #header-mobile {
       top: calc(20vw - 0.1rem);
     } */
-
+footer {
+  font-size: small;
+}
 @media screen and (max-width: 1200px) {
   #header-mobile {
     top: 7rem;
