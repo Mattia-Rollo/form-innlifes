@@ -6,6 +6,9 @@
   #header-mobile {
     top: 7rem;
   }
+  footer {
+    font-size: xx-small;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -13,10 +16,7 @@
     top: 7rem;
   }
   body {
-    padding-top: 30%;
-  }
-  footer {
-    font-size: xx-small;
+    padding-top: 10rem;
   }
 }
 
