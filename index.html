@@ -39,7 +39,7 @@
   <title>Document</title>
 </head>
 
-<body class="">
+<body>
 
   <!-- header responsive desktop  md -->
   <header id="header-desktop"
@@ -52,7 +52,7 @@
         <span class=" d-block fw-bolder fs-3 m-auto ">1</span>
       </div>
       <span class="fs-6 fw-bold ps-2">Informazioni</span>
-      <div class="bar d-none d-xxl-block bg-light-grey mx-4  rounded-3 d-block" style="height: .1rem; width: 3vw;">
+      <div class="bar d-none d-xxl-block bg-light-grey mx-4 rounded-3 d-block" style="height: .1rem; width: 3vw;">
       </div>
     </div>
 
@@ -251,19 +251,20 @@
       </div> -->
 
       <!------------------ SEDE LEGALE  ----------------------->
-      <h3 class="text-uppercase border-bottom border-1">sede operativa</h3>
+      <h3 class="text-uppercase border-bottom border-1">sede legale*</h3>
       <div class="row">
+
         <div class="col-12 col-md">
           <!-- via -->
           <label for="via" class="form-label fw-bold">Via*</label>
           <div class="input-group mb-3">
-            <input id="via" type="text" class="form-control" name="via" placeholder="Via" />
+            <input id="via" type="text" class="form-control" name="via_s_leg" placeholder="Via" />
           </div>
 
           <!-- città -->
-          <label for="citta" class="form-label">Città*</label>
+          <label for="citta" class="form-label fw-bold">Città*</label>
           <div class="input-group mb-3">
-            <input id="citta" type="text" name="citta" class="form-control" placeholder="citta" />
+            <input id="citta" type="text" class="form-control" name="citta_s_op" placeholder="citta" />
           </div>
         </div>
 
@@ -272,45 +273,45 @@
           <div class="row">
             <!-- numero  -->
             <div class="col">
-              <label for="basic-url" class="form-label">Numero*</label>
+              <label for="basic-url" class="form-label fw-bold">Numero*</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Numero" />
+                <input type="number" class="form-control" name="civico_s_leg" placeholder="Numero" />
               </div>
             </div>
             <!-- CAP  -->
             <div class="col-12 col-md">
-              <label for="basic-url" class="form-label">CAP *</label>
+              <label for="basic-url" class="form-label fw-bold">CAP *</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="CAP" />
+                <input type="number" class="form-control" name="cap_s_leg" placeholder="CAP" />
               </div>
             </div>
           </div>
 
           <!-- PROVINCIA  -->
-          <label for="basic-url" class="form-label">Provincia *</label>
+          <label for="basic-url" class="form-label fw-bold">Provincia *</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Provincia" />
+            <input type="text" class="form-control" name="provincia_s_leg" placeholder="Provincia" />
           </div>
         </div>
       </div>
 
-      <!--############### SEDE operativa  ###################-->
+      <!------------------ SEDE operativa  --------------------------->
       <h3 class="text-uppercase border-bottom border-1 mt-5 mb-3">
-        sede legale
+        sede operativa
       </h3>
 
       <div class="row">
         <div class="col-12 col-md">
           <!--# via #-->
-          <label for="basic-url" class="form-label">Via*</label>
+          <label for="civico_s_op" class="form-label fw-bold">Via*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Via" />
+            <input type="text" class="form-control" name="via_s_op" placeholder="Via" />
           </div>
 
           <!--# città #-->
-          <label for="basic-url" class="form-label">Città*</label>
+          <label for="citta_s_op" class="form-label fw-bold">Città*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="città" />
+            <input type="text" class="form-control" name="citta_s_op" placeholder="città" />
           </div>
         </div>
 
@@ -319,24 +320,24 @@
           <div class="row">
             <!-- numero  -->
             <div class="col">
-              <label for="basic-url" class="form-label">Numero*</label>
+              <label for="civico_s_op" class="form-label fw-bold">Numero*</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="numero" />
+                <input type="text" class="form-control" name="civico_sede_op" placeholder="numero" />
               </div>
             </div>
             <!-- CAP  -->
             <div class="col">
-              <label for="basic-url" class="form-label">CAP *</label>
+              <label for="cap" class="form-label fw-bold">CAP *</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="CAP" />
+                <input type="text" class="form-control" name="cap_s_op" placeholder="CAP" />
               </div>
             </div>
           </div>
 
           <!-- PROVINCIA  -->
-          <label for="basic-url" class="form-label">Provincia *</label>
+          <label for="basic-url" class="form-label fw-bold">Provincia *</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Provincia" />
+            <input type="text" class="form-control" name="provincia_s_op" placeholder="Provincia" />
           </div>
         </div>
       </div>
