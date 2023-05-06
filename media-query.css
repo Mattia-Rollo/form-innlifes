@@ -1,0 +1,30 @@
+/* #header-mobile {
+      top: calc(20vw - 0.1rem);
+    } */
+
+@media screen and (max-width: 1200px) {
+  #header-mobile {
+    top: 7rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #header-mobile {
+    top: 7rem;
+  }
+  body {
+    padding-top: 30%;
+  }
+  footer {
+    font-size: xx-small;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header-mobile {
+    top: 5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
