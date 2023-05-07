@@ -205,7 +205,7 @@ $(document).ready(function () {
 
     let template = `
     <div class="founder row"><div class="col">
-    <h3 class="text-center">Founder aggiungivo ${id_founder}</h3>
+    <h3 class="text-center p-3">Founder aggiungivo ${id_founder}</h3>
     <!-- nome e cognome  -->
       <div class="row">
         <div class="col">
