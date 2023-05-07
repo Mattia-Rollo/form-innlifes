@@ -160,7 +160,7 @@ $(document).ready(function () {
   });
 
   //   funzione per l'aggiunta di un nuovo founder al click del pulsante
-  let id_founder = 1;
+  let id_founder = 2;
   const btn_aggiungi = $("#btn_aggiungi");
   const btn_rimuovi = $("#btn_rimuovi");
 
@@ -171,19 +171,19 @@ $(document).ready(function () {
 
     let template = `
     <div class="founder row"><div class="col">
-    <h3>founder: ${id_founder}</h3>
+    <h3 class="text-center">Founder aggiungivo ${id_founder}</h3>
     <!-- nome e cognome  -->
       <div class="row">
         <div class="col">
           <!-- via -->
-          <label for="nome_founder" class="form-label">Nome*</label>
+          <label for="nome_founder" class="form-label fw-bold">Nome*</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" nome="nome_founder_${id_founder}" placeholder="Nome" />
           </div>
         </div>
         <div class="col">
           <!-- città -->
-          <label for="cognome_founder" class="form-label">Cognome*</label>
+          <label for="cognome_founder" class="form-label fw-bold">Cognome*</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" nome="cognome_founder_${id_founder}" placeholder="Cognome" />
           </div>
@@ -193,7 +193,7 @@ $(document).ready(function () {
       <!-- nome di telefono email  -->
       <div class="row">
         <div class="col">
-          <label for="tel_founder" class="form-label">
+          <label for="tel_founder" class="form-label fw-bold">
             Numero di telefono*
           </label>
           <div class="input-group mb-3">
@@ -202,7 +202,7 @@ $(document).ready(function () {
         </div>
 
         <div class="col">
-          <label for="email_founder" class="form-label">Email *</label>
+          <label for="email_founder" class="form-label fw-bold">Email *</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="email_founder_${id_founder}" placeholder="CAP" />
           </div>

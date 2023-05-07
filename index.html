@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- icona INNLIFES -->
+  <link rel="shortcut icon"
+    href="https://www.innlifes.com/wp-content/uploads/2023/03/cropped-icon-innlifes@4x-32x32.png" type="image/x-icon">
+
   <!-- jquey -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
@@ -29,6 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
     rel="stylesheet">
 
+  <!-- my style  -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-query.css">
 
@@ -36,12 +41,12 @@
 
   </style>
 
-  <title>Document</title>
+  <title>INNLIFES</title>
 </head>
 
 <body>
 
-  <!-- header responsive desktop  md -->
+  <!-- header responsive desktop lg breakpoint -->
   <header id="header-desktop"
     class="container d-none  rounded-4 bg-very-light-grey shadow-lg d-lg-flex align-items-center position-fixed justify-content-lg-around"
     style="z-index: 10;top: 8rem; left: 50%;transform: translateX(-50%); height: 6rem;">
@@ -108,7 +113,6 @@
   </header>
 
   <!-- header responsive mobile -->
-
   <header id="header-mobile" style="z-index: 10; left:50%; transform: translateX(-50%);"
     class="container bg-very-light-grey rounded-4 d-lg-none shadow-lg-mr d-flex align-items-center position-fixed justify-content-center overflow-hidden py-2">
     <div class="step d-flex align-items-center">
@@ -121,6 +125,8 @@
       <!-- <div class="bg-light-grey mx-1 mx-md-4 rounded-3 d-block" style="height: .1rem; width: 3vw;"></div> -->
     </div>
   </header>
+
+
   <!--!!## logo ##!!-->
   <!--logo mobile -->
   <div class="text-center d-md-none position-fixed top-0 w-100 py-3 pb-5 py-md-2 pb-md-5 mb-5"
@@ -140,8 +146,7 @@
 
 
     <!--#############################################-->
-    <!--#################à SLIDE 1  ###################-->
-
+    <!--#################à SLIDE 1 - informazioni ###################-->
 
     <div id="container-1" class="slide container ">
       <!-- <h1 class="pt-5 " >slide 1</h1> -->
@@ -244,7 +249,7 @@
 
 
     <!--#############################################-->
-    <!--#################à SLIDE 2  ###################-->
+    <!--#################à SLIDE 2 - Headquarters ###################-->
     <div id="container-2" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 2</h1>
@@ -374,7 +379,7 @@
     </div>
 
     <!--#############################################-->
-    <!--#################à SLIDE 3  ###################-->
+    <!--#################à SLIDE 3 - Founders ###################-->
     <div id="container-3" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 3</h1>
@@ -386,16 +391,16 @@
           <div class="row">
             <div class="col">
               <!-- via -->
-              <label for="nome_founder" class="form-label">Nome*</label>
+              <label for="nome_founder" class="form-label fw-bold">Nome*</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" nome="nome_founder" placeholder="Nome" />
+                <input type="text" class="form-control" nome="nome_founder_1" placeholder="Nome" />
               </div>
             </div>
             <div class="col">
               <!-- città -->
-              <label for="cognome_founder" class="form-label">Cognome*</label>
+              <label for="cognome_founder" class="form-label fw-bold">Cognome*</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" nome="cognome_founder" placeholder="Cognome" />
+                <input type="text" class="form-control" nome="cognome_founder_1" placeholder="Cognome" />
               </div>
             </div>
           </div>
@@ -403,18 +408,18 @@
           <!-- nome di telefono email  -->
           <div class="row">
             <div class="col">
-              <label for="tel_founder" class="form-label">
+              <label for="tel_founder" class="form-label fw-bold">
                 Numero di telefono*
               </label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="tel_founder" placeholder="Numero" />
+                <input type="text" class="form-control" name="tel_founder_1" placeholder="Numero" />
               </div>
             </div>
 
             <div class="col">
-              <label for="email_founder" class="form-label">Email *</label>
+              <label for="email_founder" class="form-label fw-bold">Email *</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="email_founder" placeholder="CAP" />
+                <input type="text" class="form-control" name="email_founder_1" placeholder="CAP" />
               </div>
             </div>
           </div>
@@ -437,7 +442,7 @@
     </div>
 
     <!--#############################################-->
-    <!--#################à SLIDE 4  ###################-->
+    <!--#################à SLIDE 4 - Other info ###################-->
     <div id="container-3" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 4</h1>
@@ -755,6 +760,7 @@
 
 
   </form>
+
   <!--!!!!!!!! pulsanti avanti - indietro  !!!!!!!!!!!!!!-->
   <div id="controls" class="container my-3">
     <div class="row">
