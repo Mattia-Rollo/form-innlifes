@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
   }
 
-  $(".slide:not(:nth(0))").hide();
+  $(".slide:not(:nth(3))").hide();
   $("#prev").hide();
 
   // inizializzo la slide corrrente
@@ -176,7 +176,7 @@ $(document).ready(function () {
       <div class="row">
         <div class="col">
           <!-- via -->
-          <label for="nome_founder" class="form-label fw-bold">Nome*</label>
+          <label for="nome_founder_${id_founder}" class="form-label fw-bold">Nome*</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" nome="nome_founder_${id_founder}" placeholder="Nome" />
           </div>
