@@ -1,7 +1,7 @@
 // funzione che conta caratteri nel textarea
 function countChar(val) {
   var len = val.value.length;
-  console.log(len);
+  //   console.log(len);
 
   if (len >= 600) {
     val.value = val.value.substring(0, 600);
@@ -115,7 +115,7 @@ $(document).ready(function () {
     //riseleziono quella visibile dopo che è cambiata
     current = $(".slide:visible");
 
-    console.log(current);
+    // console.log(current);
     step++;
 
     $("#step-icon-mobile").text(step);
@@ -123,7 +123,7 @@ $(document).ready(function () {
     setHeaderMobileMenu();
     // applico lo sfondo blu ai numeri step
     if (current.index() == 1) {
-      console.log(current.index());
+      //   console.log(current.index());
 
       $(".bar:nth(0)").removeClass("bg-light-grey");
       $(".bar:nth(0)").addClass("bg-blue-mr");
@@ -157,5 +157,54 @@ $(document).ready(function () {
     if (next.next(".slide").length === 0) {
       $("#next").hide();
     }
+  });
+
+  //   funzione per l'aggiunta di un nuovo founder al click del pulsante
+  let id_founder = 1;
+  const btn_aggiungi = $("#btn_aggiungi");
+  $("#btn_aggiungi").click(function () {
+    console.log(btn_aggiungi);
+
+    let template = `
+    <h3>id founder: ${id_founder}</h3>
+    <!-- nome e cognome  -->
+      <div class="row">
+        <div class="col">
+          <!-- via -->
+          <label for="nome_founder" class="form-label">Nome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" nome="nome_founder_${id_founder}" placeholder="Nome" />
+          </div>
+        </div>
+        <div class="col">
+          <!-- città -->
+          <label for="cognome_founder" class="form-label">Cognome*</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" nome="cognome_founder_${id_founder}" placeholder="Cognome" />
+          </div>
+        </div>
+      </div>
+
+      <!-- nome di telefono email  -->
+      <div class="row">
+        <div class="col">
+          <label for="tel_founder" class="form-label">
+            Numero di telefono*
+          </label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="tel_founder_${id_founder}" placeholder="Numero" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="email_founder" class="form-label">Email *</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="email_founder_${id_founder}" placeholder="CAP" />
+          </div>
+        </div>
+      </div>`;
+    id_founder++;
+
+    $(template).insertBefore("#btn_aggiungi");
   });
 });
