@@ -38,7 +38,7 @@ body {
 }
 
 .step-icon {
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
 .form-control:focus,
