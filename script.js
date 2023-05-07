@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
   }
 
-  $(".slide:not(:first)").hide();
+  $(".slide:not(:nth(3))").hide();
   $("#prev").hide();
 
   // inizializzo la slide corrrente
