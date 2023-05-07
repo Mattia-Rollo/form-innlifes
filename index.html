@@ -148,7 +148,7 @@
     <!--#############################################-->
     <!--#################à SLIDE 1 - informazioni ###################-->
 
-    <div id="container-1" class="slide container ">
+    <div id="slide-1" class="slide container ">
       <!-- <h1 class="pt-5 " >slide 1</h1> -->
       <p class="pt-5 pb-2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex quis
@@ -250,7 +250,7 @@
 
     <!--#############################################-->
     <!--#################à SLIDE 2 - Headquarters ###################-->
-    <div id="container-2" class="slide container pt-5">
+    <div id="slide-2" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 2</h1>
       </div> -->
@@ -380,7 +380,7 @@
 
     <!--#############################################-->
     <!--#################à SLIDE 3 - Founders ###################-->
-    <div id="container-3" class="slide container pt-5">
+    <div id="slide-3" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 3</h1>
       </div> -->
@@ -443,7 +443,7 @@
 
     <!--#############################################-->
     <!--#################à SLIDE 4 - Other info ###################-->
-    <div id="container-3" class="slide container pt-5">
+    <div id="slide-4" class="slide container pt-5">
       <!-- <div class="pb-5">
         <h1>slide 4</h1>
       </div> -->
@@ -456,7 +456,7 @@
             Numero Dipendenti (Dicembre 2022)*
           </label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="n_dipendenti_2022" placeholder="Numero Dipendenti 2022" />
+            <input type="number" class="form-control" name="n_dipendenti_2022" placeholder="Numero Dipendenti 2022" />
           </div>
         </div>
         <div class="col">
@@ -465,8 +465,7 @@
             Numero Dipendenti (Dipendenti 2023)*
           </label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control fw-bold" name="n_dipendenti_2023"
-              placeholder="Numero Dipendenti 2023" />
+            <input type="number" class="form-control" name="n_dipendenti_2023" placeholder="Numero Dipendenti 2023" />
           </div>
         </div>
       </div>
@@ -476,16 +475,21 @@
         <div class="col">
           <label for="stato_di_vita" class="form-label fw-bold">Stato di Vita*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="stato_di_vita" placeholder="Numero" />
+            <select class="form-control" name="status_di_vita">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
         </div>
 
         <div class="col">
           <label for="n_round_raccolta" class="form-label fw-bold">
-            Numero di round di raccolta *
+            Numero di round di raccolta
           </label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="n_round_raccolta" placeholder="numeri di round di raccolta" />
+            <input type="number" class="form-control" name="n_round_raccolta"
+              placeholder="Numeri di round di raccolta" />
           </div>
         </div>
       </div>
@@ -496,15 +500,17 @@
       <!-- founder Investiror -->
       <div class="row">
         <div class="col">
-          <label for="founder" class="form-label">Founder*</label>
+          <label for="founder" class="form-label fw-bold">Founder</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="founder" placeholder="founder" />
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" name="founder" placeholder="Inserire una percentuale" />
           </div>
         </div>
         <div class="col">
-          <label for="Investiror" class="form-label">Investiror*</label>
+          <label for="Investiror" class="form-label fw-bold">Investiror </label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="Investiror" placeholder="Numero" />
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" name="Investiror" placeholder="Inserire una percentuale" />
           </div>
         </div>
       </div>
@@ -512,15 +518,17 @@
       <!-- Crowfunding Finanziamenti -->
       <div class="row">
         <div class="col">
-          <label for="crowfunding" class="form-label">Crowfunding</label>
+          <label for="crowfunding" class="form-label fw-bold">Crowfunding</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="crowfunding" placeholder="Numero" />
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" name="crowfunding" placeholder="Inserire una percentuale" />
           </div>
         </div>
         <div class="col">
-          <label for="finanziamenti" class="form-label">Finanziamenti*</label>
+          <label for="finanziamenti" class="form-label fw-bold">Finanziamenti*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="finanziamenti" placeholder="Numero" />
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" name="finanziamenti" placeholder="Inserire una percentuale" />
           </div>
         </div>
       </div>
@@ -528,13 +536,14 @@
       <!-- Equity value  - Status -->
       <div class="row">
         <div class="col">
-          <label for="equity_value" class="form-label">Equity Value</label>
+          <label for="equity_value" class="form-label fw-bold">Equity Value</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="equity_value" placeholder="Numero" />
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" name="equity_value" placeholder="Inserire una percentuale" />
           </div>
         </div>
         <div class="col">
-          <label for="status" class="form-label">Status*</label>
+          <label for="status" class="form-label fw-bold">Status*</label>
           <div class="input-group mb-3">
             <select type="text" class="form-control" name="status" placeholder="Numero">
               <option selected value="0">...</option>
@@ -548,7 +557,7 @@
       <!-- exit -  RevenueY1salses -->
       <div class="row">
         <div class="col">
-          <label for="exit" class="form-label">Exit</label>
+          <label for="exit" class="form-label fw-bold">Exit</label>
           <div class="input-group mb-3 gap-2">
             <input type="radio" class="" name="exit" value="si" style="width: 1.2rem; height: 1.2rem" />
             <label for="">Si</label>
@@ -558,9 +567,9 @@
         </div>
 
         <div class="col">
-          <label for="revenueY1salses" class="form-label">RevenueY1salses*</label>
+          <label for="revenueY1salses" class="form-label fw-bold">RevenueY1salses*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="revenueY1salses" placeholder="Numero" />
+            <input type="text" class="form-control" name="revenueY1salses" placeholder="Inserisci un valore" />
           </div>
         </div>
       </div>
@@ -569,7 +578,7 @@
       <div class="row">
         <!-- RevenueY3salses -->
         <div class="col">
-          <label for="revenueY3salses" class="form-label">RevenueY3salses</label>
+          <label for="revenueY3salses" class="form-label fw-bold">RevenueY3salses</label>
           <div class="input-group mb-3 gap-2">
             <input type="text" class="form-control" name="revenueY3salses" placeholder="Inserisci un valore" />
           </div>
@@ -577,7 +586,7 @@
 
         <!-- EbidtaY1 -->
         <div class="col">
-          <label for="EbidtaY1" class="form-label">EbidtaY1</label>
+          <label for="EbidtaY1" class="form-label fw-bold">EbidtaY1</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="EbidtaY1" placeholder="Inserisci un valore" />
           </div>
@@ -588,7 +597,7 @@
       <div class="row">
         <!-- RevenueY3salses -->
         <div class="col">
-          <label for="EbidtaY3" class="form-label">EbidtaY3</label>
+          <label for="EbidtaY3" class="form-label fw-bold">EbidtaY3</label>
           <div class="input-group mb-3 gap-2">
             <input type="text" class="form-control" name="EbidtaY3" placeholder="Inserisci un valore" />
           </div>
@@ -596,7 +605,7 @@
 
         <!-- EbidtaY1 -->
         <div class="col">
-          <label for="settore_industriale" class="form-label">
+          <label for="settore_industriale" class="form-label fw-bold">
             Settore Industriale
           </label>
           <div class="input-group mb-3">
@@ -608,13 +617,19 @@
       <!-- area/indicazione terapeutica  -->
       <div class="row">
         <div class="col">
-          <label for="area_terapeutica" class="form-label">
+          <label for="area_terapeutica" class="form-label fw-bold">
             Area/Indicazione terapeutica
           </label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="area_terapeutica" placeholder="Inserisci un valore" />
+            <!-- <input type="text" class="form-control" name="area_terapeutica" placeholder="Inserisci un valore" /> -->
+            <select type="text" class="form-control" name="area_terapeutica">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
         </div>
+        <div class="col"></div>
       </div>
 
       <!--#################à Prodotto #####################à-->
@@ -624,57 +639,73 @@
         <!-- tipologia di prodotto - se Medtech - se Biotech - se Digital Therapeutics -->
         <div class="col">
           <!-- Tipologia di prodotto -->
-          <label for="tipo_di_prodotto" class="form-label">
+          <label for="tipologia_prodotto" class="form-label fw-bold">
             Tipologia di prodotto*
           </label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="tipo_di_prodotto" placeholder="Inserisci un valore" />
+            <select type="text" class="form-control" name="tipologia_prodotto">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
 
           <!-- se Medtech -->
-          <label for="se_Medtech" class="form-label">se Medtech*</label>
+          <label for="se_Medtech" class="form-label fw-bold">se Medtech*</label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="se_Medtech" placeholder="Inserisci un valore" />
+            <select type="text" class="form-control" name="se_Medtech">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
 
           <!-- se Biotech -->
-          <label for="se_Biotech" class="form-label">se Biotech*</label>
+          <label for="se_Biotech" class="form-label fw-bold">se Biotech</label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="se_Biotech" placeholder="Inserisci un valore" />
+            <select type="text" class="form-control" name="se_Biotech">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
 
           <!-- se Digital Therapeutics -->
-          <label for="se_Digital_Therapeutics" class="form-label">
+          <label for="se_Digital_Therapeutics" class="form-label fw-bold">
             se Digital Therapeutics*
           </label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="se_Digital_Therapeutics" placeholder="Inserisci un valore" />
+            <select type="text" class="form-control" name="se_Digital_Therapeutics">
+              <option selected value="0">. . .</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
           </div>
         </div>
 
         <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
         <div class="col">
-          <label class="form-label">Altro(Specificare)*</label>
-          <textarea class="form-control mb-3" name="altro" id="" rows="4"></textarea>
+          <label class="form-label fw-bold">Altro(Specificare)*</label>
+          <textarea class="form-control mb-3" name="altro" rows="6"></textarea>
 
           <!-- FDA - EMEA  -->
           <div class="row">
             <div class="col">
-              <label class="form-label">FDA approved</label>
-              <div>
-                <input type="radio" name="FDA" value="si" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">si</label>
-                <input type="radio" name="FDA" value="no" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">no</label>
+              <label class="form-label fw-bold">FDA approved</label>
+              <div class="input-group mb-3 gap-2 align-items-center">
+                <input type="radio" name="FDA_1" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label m-0">si</label>
+                <input type="radio" name="FDA_1" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label m-0">no</label>
               </div>
             </div>
             <div class="col">
-              <label class="form-label">EMEA approved</label>
-              <div>
+              <label class="form-label fw-bold">EMEA approved</label>
+              <div class="input-group mb-3 gap-2 align-items-center">
                 <input type="radio" name="EMEA" value="si" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">si</label>
+                <label class="form-label m-0">si</label>
                 <input type="radio" name="EMEA" value="no" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">no</label>
+                <label class="form-label m-0">no</label>
               </div>
             </div>
           </div>
@@ -682,21 +713,21 @@
           <!-- FDA - CE -->
           <div class="row">
             <div class="col">
-              <label class="form-label">FDA approved</label>
-              <div>
-                <input type="radio" name="FDA" value="si" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">si</label>
-                <input type="radio" name="FDA" value="no" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">no</label>
+              <label class="form-label fw-bold">FDA approved</label>
+              <div class="input-group mb-3 gap-2 align-items-center">
+                <input type="radio" name="FDA_2" value="si" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label m-0">si</label>
+                <input type="radio" name="FDA_2" value="no" style="width: 1.2rem; height: 1.2rem" />
+                <label class="form-label m-0">no</label>
               </div>
             </div>
             <div class="col">
-              <label class="form-label">CE approved</label>
-              <div>
+              <label class="form-label fw-bold">CE approved</label>
+              <div class="input-group mb-3 gap-2 align-items-center">
                 <input type="radio" name="CE" value="si" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">si</label>
+                <label class="form-label m-0">si</label>
                 <input type="radio" name="CE" value="no" style="width: 1.2rem; height: 1.2rem" />
-                <label class="form-label">no</label>
+                <label class="form-label m-0">no</label>
               </div>
             </div>
           </div>
@@ -704,61 +735,238 @@
       </div>
 
       <!--################# Market #####################-->
-      <h3 class="border-bottom border-1 mt-5">MARKET *</h3>
+      <h3 class="border-bottom border-1 mt-5 mb-4">MARKET *</h3>
 
       <div class="row">
-        <!-- tipologia di prodotto - se Medtech - se Biotech - se Digital Therapeutics -->
+        <!-- mercato - nome dispositivo - dispositivo medico - se Digital Therapeutics - altro -->
         <div class="col">
           <!-- mercato -->
 
           <div class="input-group mb-3">
-            <div class="me-3">
+            <div class="me-5">
               <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
-                class="form-label ms-3">EU</label>
+                class="form-label ms-2" value="US">US</label>
             </div>
-            <div class="me-3">
+            <div class="me-5">
               <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
-                class="form-label ms-3">ASIA</label>
+                class="form-label ms-2" value="EU">EU</label>
             </div>
-            <div class="me-3">
+            <div class="me-5">
               <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
-                class="form-label ms-3">LAT</label>
+                class="form-label ms-2" value="AS">ASIA</label>
+            </div>
+            <div class="me-5">
+              <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
+                class="form-label ms-2" value="LAT">LAT</label>
             </div>
           </div>
         </div>
       </div>
 
       <div class="row">
+
+        <!-- nome dispositivo -->
         <div class="col">
-          <!-- nome dispositivo -->
           <label for="nome_dispositivo" class="form-label fw-bold">Nome Dispositivo</label>
           <div class="input-group mb-3 gap-2">
             <input type="text" class="form-control" name="nome_dispositivo" placeholder=" Inserisci un valore" />
           </div>
+        </div>
 
-          <!-- dispositivo medico si/no -->
-          <label for="dispositivo_medico" class="form-label fw-bold">dispositivo medico</label>
-          <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="dispositivo_medico" placeholder="Inserisci un valore" />
-          </div>
-
-          <!-- se Digital Therapeutics -->
-          <label for="basic-url" class="form-label">
-            se Digital Therapeutics*
-          </label>
-          <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="Digital-Therapeutics" placeholder="Inserisci un valore" />
+        <!-- dispositivo medico si/no -->
+        <div class="col">
+          <label for="dispositivo_medico" class="form-label fw-bold">Dispositivo Medico</label>
+          <div class="input-group mb-3 gap-2 align-items-center">
+            <input type="radio" name="dispositivo_medico" value="si" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">si</label>
+            <input type="radio" name="dispositivo_medico" value="no" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">no</label>
           </div>
         </div>
 
-        <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
+      </div>
+
+
+      <div class="row">
+
+        <!-- Paese in cui è distribuito -->
         <div class="col">
-          <label class="form-label">Altro(Specificare)*</label>
-          <textarea class="form-control mb-3" name="altro" id="" rows="4"></textarea>
+          <label for="basic-url" class="form-label fw-bold">
+            Paese in cui è distribuito
+          </label>
+          <select type="text" class="form-control" name="se_Digital_Therapeutics">
+            <option selected value="0">. . .</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <div class="col"></div>
+      </div>
+
+      <!-- Combinazione di farmaci - quali farmaci  -->
+
+      <div class="row pt-3">
+        <div class="col">
+          <label for="dispositivo_medico" class="form-label fw-bold">Combinazione di farmaci</label>
+          <div class="input-group mb-3 gap-2 align-items-center">
+            <input type="radio" name="dispositivo_medico" value="si" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">si</label>
+            <input type="radio" name="dispositivo_medico" value="no" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">no</label>
+          </div>
+        </div>
+        <div class="col">
+          <label for="farmaci" class="form-label fw-bold">Quali farmaci?</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="farmaci" placeholder=" Inserisci un valore" />
+          </div>
         </div>
       </div>
+
+      <!-- prescrizione - DTX -->
+      <div class="row pt-3">
+        <div class="col">
+          <label for="prescrizione" class="form-label fw-bold">Prescrizione</label>
+          <div class="input-group mb-3 gap-2 align-items-center">
+            <input type="radio" name="prescrizione" value="si" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">si</label>
+            <input type="radio" name="prescrizione" value="no" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">no</label>
+          </div>
+        </div>
+        <div class="col">
+          <label for="DTX" class="form-label fw-bold">DTX</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="DTX" placeholder=" Inserisci un valore" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tipologia (tecnologia) -->
+      <div class="row">
+        <div class="col">
+          <label for="tecnologia" class="form-label fw-bold">
+            Tipologia (tecnologia)
+          </label>
+          <select type="text" class="form-control" name="tecnologia">
+            <option selected value="0">. . .</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label for="DTX" class="form-label fw-bold">NTC numero di studio</label>
+          <div class="input-group mb-3 gap-2">
+            <input type="text" class="form-control" name="DTX" placeholder="Inserisci un valore" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Business model - Brevetti -->
+      <div class="row">
+        <div class="col">
+          <label for="business_model" class="form-label fw-bold">
+            Business model*
+          </label>
+          <select type="text" class="form-control" name="business_model">
+            <option selected value="0">. . .</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+
+        <div class="col">
+          <label for="brevetti" class="form-label fw-bold">Brevetti*</label>
+          <div class="input-group mb-3 gap-2 align-items-center">
+            <input type="radio" name="brevetti" value="si" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">si</label>
+            <input type="radio" name="brevetti" value="no" style="width: 1.2rem; height: 1.2rem" />
+            <label class="form-label m-0">no</label>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
+    <!--#############################################-->
+    <!--#################à SLIDE 5 - documents ###################-->
+
+    <div id="slide-5" class="slide container pt-5">
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="logo" class="form-label fw-bold">
+              One Page *
+            </label>
+            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="logo" class="form-label fw-bold">
+              Deck *
+            </label>
+            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="logo" class="form-label fw-bold">
+              Business Plan *
+            </label>
+            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+          </div>
+        </div>
+      </div>
+      <div id="controls-last-page" class="container my-3">
+        <div class="row mb-2">
+          <div class="col d-flex ">
+            <button id="prev-last" type="button" class="btn rounded-pill shadow text-black w-100 text-uppercase"
+              style="background-color: #ffffff!important;">
+              indietro
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button id="next-last" type="button" class="btn btn-primary rounded-pill text-uppercase w-100"
+              style="background-color: #00528c!important;">
+              invia
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--#############################################-->
+    <!--#################à SLIDE 6 - conferma di invio ###################-->
+
+    <div id="slide-6" class="slide container pt-5 ">
+      <div class="container p-5 shadow-lg rounded-5 text-center mt-5 ">
+
+
+        <div class="bg-blue-mr m-auto rounded-circle mb-3 d-flex" style="width: 5rem; height: 5rem;">
+
+          <i class="fa-solid fa-check display-3 text-white m-auto"></i>
+
+        </div>
+
+        <h1 class="text-uppercase fw-bold text-blue-mr mb-3">registrazione effettuata con successo</h1>
+        <p class="fs-5 fw-bolder">Riceverai un amail di riepilogo della registrazione</p>
+
+      </div>
+
+    </div>
 
   </form>
 
@@ -766,15 +974,15 @@
   <div id="controls" class="container my-3">
     <div class="row">
       <div class="col d-flex ">
-        <button id="prev" type="button" class="btn btn-primary rounded-pill "
+        <button id="prev" type="button" class="btn btn-primary rounded-pill text-uppercase w-25"
           style="background-color: #00528c!important;">
-          <i class="fa-solid fa-arrow-left me-4"></i> indietro
+          <i class="fa-solid fa-chevron-left me-3"></i> indietro
         </button>
       </div>
       <div class="col d-flex justify-content-end">
-        <button id="next" type="button" class="btn btn-primary rounded-pill "
+        <button id="next" type="button" class="btn btn-primary rounded-pill text-uppercase w-25"
           style="background-color: #00528c!important;">
-          avanti <i class="fa-solid fa-arrow-right ms-4"></i>
+          avanti <i class="ms-3 fa-solid fa-chevron-right"></i>
         </button>
       </div>
     </div>

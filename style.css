@@ -2,6 +2,20 @@ body {
   font-family: "lato", sans-serif;
   padding-top: 13rem;
 }
+/* .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
+  border-radius: 50%;
+} */
+/* input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #00528c;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.05em solid #00528c;
+  border-radius: 50%;
+} */
 
 .bg-light-grey {
   background-color: rgb(200, 200, 200);

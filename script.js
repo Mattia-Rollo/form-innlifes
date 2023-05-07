@@ -36,13 +36,17 @@ $(document).ready(function () {
     }
   }
 
-  $(".slide:not(:nth(3))").hide();
+  $(".slide:not(:nth(0))").hide();
   $("#prev").hide();
 
   // inizializzo la slide corrrente
   var current;
 
-  $("#prev").click(function () {
+  $("#prev").click(handleButtonClickPrev);
+  $("#prev-last").click(handleButtonClickPrev);
+
+  // funzione per gestire il bottone INDIETRO
+  function handleButtonClickPrev() {
     step--;
     $("#step-icon-mobile").text(step);
 
@@ -69,6 +73,12 @@ $(document).ready(function () {
     var next = current.next(".slide");
 
     // tolgo lo sfondo blu ai numeri
+    if (current.index() == 3) {
+      $(".step-icon:nth(4)").removeClass("bg-blue-mr");
+      $(".step-icon:nth(4)").addClass("bg-light-grey");
+      $(".bar:nth(3)").removeClass("bg-blue-mr");
+      $(".bar:nth(3)").addClass("bg-light-grey");
+    }
     if (current.index() == 2) {
       $(".step-icon:nth(3)").removeClass("bg-blue-mr");
       $(".step-icon:nth(3)").addClass("bg-light-grey");
@@ -97,11 +107,19 @@ $(document).ready(function () {
     if (current.next(".slide").length !== 0) {
       $("#next").show();
     }
-  });
+
+    if (current.index() === 3) {
+      $("#prev").show();
+    }
+  }
 
   $("#step-icon-mobile").text(step);
 
-  $("#next").click(function () {
+  $("#next").click(handleButtonClickNext);
+  $("#next-last").click(handleButtonClickNext);
+
+  // funzione per gestire bottone AVANTI
+  function handleButtonClickNext() {
     //seleziono slide visibile / corrente
     current = $(".slide:visible");
     //seleziono quella successiva
@@ -142,8 +160,20 @@ $(document).ready(function () {
       $(".bar:nth(2)").removeClass("bg-light-grey");
       $(".bar:nth(2)").addClass("bg-blue-mr");
     }
+    if (current.index() == 4) {
+      $(".step-icon:nth(4)").removeClass("bg-light-grey");
+      $(".step-icon:nth(4)").addClass("bg-blue-mr");
+      $(".bar:nth(3)").removeClass("bg-light-grey");
+      $(".bar:nth(3)").addClass("bg-blue-mr");
+    }
+    if (current.index() == 5) {
+      $(".step-icon:nth(5)").removeClass("bg-light-grey");
+      $(".step-icon:nth(5)").addClass("bg-blue-mr");
+      $(".bar:nth(4)").removeClass("bg-light-grey");
+      $(".bar:nth(4)").addClass("bg-blue-mr");
+    }
 
-    // non mi ricordo cosa fanno queste funzioni ma funzionano
+    //nascondo i pulsanti nelle segenti condizioni
     if (next.length === 0) {
       next = $(".slide:first");
 
@@ -157,7 +187,11 @@ $(document).ready(function () {
     if (next.next(".slide").length === 0) {
       $("#next").hide();
     }
-  });
+    if (current.index() >= 4) {
+      $("#next").hide();
+      $("#prev").hide();
+    }
+  }
 
   //   funzione per l'aggiunta di un nuovo founder al click del pulsante
   let id_founder = 2;
