@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
   }
 
-  $(".slide:not(:nth(3))").hide();
+  $(".slide:not(:nth(0))").hide();
   $("#prev").hide();
 
   // inizializzo la slide corrrente
@@ -162,11 +162,16 @@ $(document).ready(function () {
   //   funzione per l'aggiunta di un nuovo founder al click del pulsante
   let id_founder = 1;
   const btn_aggiungi = $("#btn_aggiungi");
+  const btn_rimuovi = $("#btn_rimuovi");
+
+  btn_rimuovi.hide();
+
   $("#btn_aggiungi").click(function () {
     console.log(btn_aggiungi);
 
     let template = `
-    <h3>id founder: ${id_founder}</h3>
+    <div class="founder row"><div class="col">
+    <h3>founder: ${id_founder}</h3>
     <!-- nome e cognome  -->
       <div class="row">
         <div class="col">
@@ -202,9 +207,21 @@ $(document).ready(function () {
             <input type="text" class="form-control" name="email_founder_${id_founder}" placeholder="CAP" />
           </div>
         </div>
-      </div>`;
+      </div>
+      </div></div>`;
+    $(template).hide().insertBefore("#aggiungi_rimuovi").fadeIn();
+    btn_rimuovi.show();
     id_founder++;
+  });
 
-    $(template).insertBefore("#btn_aggiungi");
+  // let founder = $("#founder");
+
+  btn_rimuovi.click(function () {
+    console.log();
+    let div = $(".founder:last").slideUp();
+    div.remove();
+    console.log(div);
+    id_founder--;
+    $(".founder").length == 1 ? btn_rimuovi.hide() : null;
   });
 });
