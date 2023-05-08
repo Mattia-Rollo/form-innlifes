@@ -31,6 +31,9 @@ $(document).ready(function () {
       case 5:
         $("#step-title-mobile").text("Documents");
         break;
+      case 6:
+        $("#step-title-mobile").text("Conferma");
+        break;
       default:
         break;
     }
@@ -120,6 +123,8 @@ $(document).ready(function () {
 
   // funzione per gestire bottone AVANTI
   function handleButtonClickNext() {
+    step++;
+
     //seleziono slide visibile / corrente
     current = $(".slide:visible");
     //seleziono quella successiva
@@ -134,7 +139,6 @@ $(document).ready(function () {
     current = $(".slide:visible");
 
     // console.log(current);
-    step++;
 
     $("#step-icon-mobile").text(step);
 
@@ -171,6 +175,9 @@ $(document).ready(function () {
       $(".step-icon:nth(5)").addClass("bg-blue-mr");
       $(".bar:nth(4)").removeClass("bg-light-grey");
       $(".bar:nth(4)").addClass("bg-blue-mr");
+    }
+    if (current.index() == 6) {
+      $("#header-mobile").hide();
     }
 
     //nascondo i pulsanti nelle segenti condizioni
