@@ -73,6 +73,15 @@ body {
 footer {
   font-size: normal;
 }
+i{
+  transition: all 0.5s;
+}
+#next:hover i{
+  transform: translateX(1.2rem);
+}
+#prev:hover i{
+  transform: translateX(-1.2rem);
+}
 
 /************************/
 /***** scrollbar ********/
