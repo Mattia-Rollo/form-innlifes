@@ -36,6 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
     rel="stylesheet">
 
+
+
   <!-- my style  -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-query.css">
@@ -231,7 +233,7 @@
             <label for="logo" class="form-label fw-bold">
               Logo *
             </label>
-            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" />
           </div>
           <div class="mb-3">
             <label for="descrizione" class="form-label fw-bold">
@@ -438,15 +440,15 @@
         <div class="container">
           <div class="row">
 
-            <div class="col ">
+            <div class="col text-end">
               <button id="btn_aggiungi" type="button" class="btn rounded-pill shadow text-black"
                 style="background-color: #ffffff!important;">
                 aggiungi founder<i class="ms-2 fa-solid fa-plus"></i>
               </button>
             </div>
 
-            <div class="col ">
-              <button id="btn_rimuovi" type="button" class="ms-2 btn rounded-pill shadow text-black"
+            <div class="col text-start">
+              <button id="btn_rimuovi" type="button" class="btn rounded-pill shadow text-black"
                 style="background-color: #ffffff!important;">
                 rimuovi<i class="ms-2 fa-solid fa-minus"></i>
               </button>
@@ -922,7 +924,7 @@
             <label for="logo" class="form-label fw-bold">
               One Page *
             </label>
-            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" />
           </div>
         </div>
       </div>
@@ -932,7 +934,7 @@
             <label for="logo" class="form-label fw-bold">
               Deck *
             </label>
-            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" />
           </div>
         </div>
       </div>
@@ -942,10 +944,29 @@
             <label for="logo" class="form-label fw-bold">
               Business Plan *
             </label>
-            <input type="file" name="logo" class="form-control h-50" id="logo" placeholder="logo" />
+            <input type="file" name="logo" class=" filepond" id="logo" placeholder="logo" />
           </div>
         </div>
       </div>
+
+      <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+      <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet" />
+
+      <!-- <input type="file" class="filepond">
+      <input type="file" class="filepond"> -->
+      <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+      <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+      <script>
+        FilePond.registerPlugin(FilePondPluginImagePreview);
+
+        FilePond.parse(document.body);
+      </script>
+
+
+
+
 
       <!-- bottoni INDIETRO e INVIO  -->
       <div class="row mb-2">
