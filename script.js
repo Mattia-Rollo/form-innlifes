@@ -13,7 +13,12 @@ function countChar(val) {
 
 $(document).ready(function () {
   let step = 1;
+  var current;
+
+  $("#step-icon-mobile").text(step);
+
   $("html, body").scrollTop(0);
+
   function setHeaderMobileMenu() {
     switch (step) {
       case 1:
@@ -41,9 +46,6 @@ $(document).ready(function () {
 
   $(".slide:not(:nth(0))").hide();
   $("#prev").hide();
-
-  // inizializzo la slide corrrente
-  var current;
 
   $("#prev").click(handleButtonClickPrev);
   $("#prev-last").click(handleButtonClickPrev);
@@ -116,10 +118,10 @@ $(document).ready(function () {
     }
   }
 
-  $("#step-icon-mobile").text(step);
-
   $("#next").click(handleButtonClickNext);
-  $("#next-last").click(function () {
+  $("#next-last").click(function (e) {
+    e.preventDefault();
+
     Swal.fire({
       title: "Sicuro di voler inviare i dati?",
       text: "",
@@ -131,9 +133,12 @@ $(document).ready(function () {
       cancelButtonText: "No, aspetta!",
     }).then((result) => {
       if (result.isConfirmed) {
-        $.aja;
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
         handleButtonClickNext();
+        setTimeout(function () {
+          console.log("invio");
+          $("#myForm").submit();
+        }, 2000);
       }
     });
   });
@@ -275,10 +280,8 @@ $(document).ready(function () {
   // let founder = $("#founder");
 
   btn_rimuovi.click(function () {
-    console.log();
     let div = $(".founder:last").slideUp();
     div.remove();
-    console.log(div);
     id_founder--;
     $(".founder").length == 1 ? btn_rimuovi.hide() : null;
   });
