@@ -12,5 +12,6 @@ FilePond.setOptions({
   acceptedFileTypes: ["image/jpg"],
 });
 
+FilePond.registerPlugin(FilePondPluginImageTransform);
 FilePond.parse(document.body);
 // console.log(FilePond.getOptions());
