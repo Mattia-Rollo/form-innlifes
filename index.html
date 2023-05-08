@@ -36,6 +36,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
     rel="stylesheet">
 
+  <!-- filepond -->
+
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+    rel="stylesheet" />
+
+
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
 
 
   <!-- my style  -->
@@ -924,7 +935,7 @@
             <label for="logo" class="form-label fw-bold">
               One Page *
             </label>
-            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" />
+            <input type="file" name="one_page" class="filepond " id="one-page" data-max-files="10" required />
           </div>
         </div>
       </div>
@@ -934,35 +945,23 @@
             <label for="logo" class="form-label fw-bold">
               Deck *
             </label>
-            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" />
+            <input type="file" name="deck" class="filepond" id="deck" />
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col">
           <div class="mb-3">
             <label for="logo" class="form-label fw-bold">
               Business Plan *
             </label>
-            <input type="file" name="logo" class=" filepond" id="logo" placeholder="logo" />
+            <input type="file" name="business_plan" class=" filepond" id="business-plan" />
           </div>
         </div>
       </div>
 
-      <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-      <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
-        rel="stylesheet" />
 
-      <!-- <input type="file" class="filepond">
-      <input type="file" class="filepond"> -->
-      <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-      <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-
-      <script>
-        FilePond.registerPlugin(FilePondPluginImagePreview);
-
-        FilePond.parse(document.body);
-      </script>
+      <script src="filepond.js"></script>
 
 
 
