@@ -119,28 +119,27 @@ $(document).ready(function () {
   }
 
   $("#next").click(handleButtonClickNext);
-  $("#next-last").click(function (e) {
-    e.preventDefault();
-
-    Swal.fire({
-      title: "Sicuro di voler inviare i dati?",
-      text: "",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#00528c",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Confermo",
-      cancelButtonText: "No, aspetta!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        handleButtonClickNext();
-        setTimeout(function () {
-          console.log("invio");
-          $("#myForm").submit();
-        }, 2000);
-      }
-    });
+  $("#submit").click(function (e) {
+    // e.preventDefault();
+    // Swal.fire({
+    //   title: "Sicuro di voler inviare i dati?",
+    //   text: "",
+    //   icon: "warning",
+    //   showCancelButton: true,
+    //   confirmButtonColor: "#00528c",
+    //   cancelButtonColor: "#d33",
+    //   confirmButtonText: "Confermo",
+    //   cancelButtonText: "No, aspetta!",
+    // }).then((result) => {
+    //   if (result.isConfirmed) {
+    //     // Swal.fire("Deleted!", "Your file has been deleted.", "success");
+    //     handleButtonClickNext();
+    //     setTimeout(function () {
+    //       console.log("invio");
+    //       $("#myForm").submit();
+    //     }, 2000);
+    //   }
+    // });
   });
 
   // funzione per gestire bottone AVANTI
