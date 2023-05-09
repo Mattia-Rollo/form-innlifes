@@ -122,12 +122,27 @@ $(document).ready(function () {
   $("#submit").click(function (e) {
     e.preventDefault();
 
+    $("#myForm").validate({
+      // Personalizza i messaggi di errore
+      messages: {
+        name: "Please enter your name",
+        email: {
+          required: "Please enter your email address",
+          email: "Please enter a valid email address",
+        },
+        password: "Please enter a password",
+      },
+      // Personalizza le classi CSS per gli errori
+      errorClass: "is-invalid",
+      validClass: "is-valid",
+      // Personalizza la gestione dell'evento submit
+      submitHandler: function (form) {
+        // Fai qualcosa qui, ad esempio invia il form
+        form.submit();
+      },
+    });
+
     if ($("form").valid()) {
-      handleButtonClickNext();
-      setTimeout(function () {
-        console.log("invio");
-        $("#myForm").submit();
-      }, 2000);
     } else {
       $("form").addClass("was-validated");
     }

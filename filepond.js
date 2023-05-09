@@ -11,7 +11,7 @@ FilePond.setOptions({
   instantUpload: false,
   // dropOnPage: true,
   // dropValidation: true,
-  ignoredFiles: [".ds_store", "thumbs.db", "desktop.ini"],
+  // ignoredFiles: [".ds_store", "thumbs.db", "desktop.ini"],
   // allowFileTypeValidation: true,
   acceptedFileTypes: ["image/jpg", "image/png"],
   labelFileTypeNotAllowed: "Il file non è di tipo valido",
