@@ -10,6 +10,8 @@ FilePond.setOptions({
   ignoredFiles: [".ds_store", "thumbs.db", "desktop.ini"],
   allowFileTypeValidation: true,
   acceptedFileTypes: ["image/jpg"],
+  labelIdle:
+    'Trascina e rilascia qui i tuoi file oppure <span class="filepond--label-action">Sfoglia</span>',
 });
 
 FilePond.registerPlugin(FilePondPluginImageTransform);
