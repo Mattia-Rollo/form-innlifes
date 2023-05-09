@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
   }
 
-  $(".slide:not(:nth(0))").hide();
+  // $(".slide:not(:nth(0))").hide();
   $("#prev").hide();
 
   $("#prev").click(handleButtonClickPrev);
@@ -120,7 +120,18 @@ $(document).ready(function () {
 
   $("#next").click(handleButtonClickNext);
   $("#submit").click(function (e) {
-    // e.preventDefault();
+    e.preventDefault();
+
+    if ($("form").valid()) {
+      handleButtonClickNext();
+      setTimeout(function () {
+        console.log("invio");
+        $("#myForm").submit();
+      }, 2000);
+    } else {
+      $("form").addClass("was-validated");
+    }
+
     // Swal.fire({
     //   title: "Sicuro di voler inviare i dati?",
     //   text: "",
@@ -201,14 +212,12 @@ $(document).ready(function () {
       $("#header-mobile").hide();
     }
 
-    //nascondo i pulsanti nelle segenti condizioni
-    if (next.length === 0) {
-      next = $(".slide:first");
-
+    //nascondo i pulsanti nelle seguenti condizioni
+    if (current.index() === 0) {
       $("#prev").hide();
     }
 
-    if (next.prev(".slide").length !== 0) {
+    if (current.index() !== 0) {
       $("#prev").show();
     }
 
