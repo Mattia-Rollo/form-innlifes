@@ -13,7 +13,7 @@ FilePond.setOptions({
   // dropValidation: true,
   // ignoredFiles: [".ds_store", "thumbs.db", "desktop.ini"],
   // allowFileTypeValidation: true,
-  acceptedFileTypes: ["image/jpg", "image/png"],
+  // acceptedFileTypes: ["image/jpg", "image/png"],
   labelFileTypeNotAllowed: "Il file non è di tipo valido",
 
   maxFileSize: "1MB",

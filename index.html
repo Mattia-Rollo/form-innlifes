@@ -238,14 +238,14 @@
 
           <!-- data costruzione  -->
           <label for="data_costruzione" class="form-label fw-bold mt-3">
-            Data Costruzione*
+            Data Costruzione *
           </label>
           <div class="input-group mb-3">
-            <input type="date" class="form-control" name="data_costruzione" />
+            <input type="date" class="form-control" name="data_costruzione" required />
           </div>
 
           <!-- sito web  -->
-          <label for="sito_web" class="form-label fw-bold">Sito web *</label>
+          <label for="sito_web" class="form-label fw-bold">Sito web </label>
           <div class="input-group mb-3">
             <input type="text" name="sito_web" class="form-control" placeholder="Sito web" />
           </div>
@@ -256,9 +256,9 @@
         <div class="col">
           <div class="mb-3">
             <label for="logo" class="form-label fw-bold">
-              Logo *
+              Logo
             </label>
-            <input type="file" name="logo" class="filepond" id="logo" placeholder="logo" required />
+            <input type="file" name="logo" class="filepond form-control" id="logo" placeholder="logo" required />
           </div>
           <div class="mb-3">
             <label for="descrizione" class="form-label fw-bold">
@@ -270,11 +270,11 @@
           </div>
           <!-- numero soci  -->
           <label for="basic-url" class="form-label fw-bold">
-            Numero Soci*
+            Numero Soci *
           </label>
           <div class="input-group mb-3">
             <input type="number" class="form-control" name="numero_soci" placeholder="Inserire un Valore"
-              aria-label="Username" />
+              aria-label="Username" required />
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
         <div class="col-12 col-md">
           <label for="via" class="form-label fw-bold">Via*</label>
           <div class="input-group mb-3">
-            <input id="via" type="text" class="form-control" name="via_s_leg" placeholder="Via" />
+            <input id="via" type="text" class="form-control" name="via_s_leg" placeholder="Via" required />
           </div>
         </div>
 
@@ -308,7 +308,7 @@
             <div class="col-12 col-md">
               <label for="basic-url" class="form-label fw-bold">Numero*</label>
               <div class="input-group mb-3">
-                <input type="number" class="form-control" name="civico_s_leg" placeholder="Numero" />
+                <input type="number" class="form-control" name="civico_s_leg" placeholder="Numero" required />
               </div>
             </div>
 
@@ -317,7 +317,7 @@
               <div class="col-12 col-md">
                 <label for="basic-url" class="form-label fw-bold">CAP *</label>
                 <div class="input-group mb-3">
-                  <input type="number" class="form-control" name="cap_s_leg" placeholder="CAP" />
+                  <input type="number" class="form-control" name="cap_s_leg" placeholder="CAP" required />
                 </div>
               </div>
             </div>
@@ -333,7 +333,7 @@
           <!-- città -->
           <label for="citta" class="form-label fw-bold">Città*</label>
           <div class="input-group mb-3">
-            <input id="citta" type="text" class="form-control" name="citta_s_leg" placeholder="citta" />
+            <input id="citta" type="text" class="form-control" name="citta_s_leg" placeholder="citta" required />
           </div>
 
 
@@ -343,7 +343,7 @@
           <!-- PROVINCIA  -->
           <label for="basic-url" class="form-label fw-bold">Provincia *</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="provincia_s_leg" placeholder="Provincia" />
+            <input type="text" class="form-control" name="provincia_s_leg" placeholder="Provincia" required />
           </div>
         </div>
       </div>
@@ -357,7 +357,7 @@
 
         <!-- via -->
         <div class="col-12 col-md">
-          <label for="via" class="form-label fw-bold">Via*</label>
+          <label for="via" class="form-label fw-bold">Via</label>
           <div class="input-group mb-3">
             <input id="via" type="text" class="form-control" name="via_s_op" placeholder="Via" />
           </div>
@@ -368,7 +368,7 @@
 
             <!-- civico  -->
             <div class="col-12 col-md">
-              <label for="basic-url" class="form-label fw-bold">Numero*</label>
+              <label for="basic-url" class="form-label fw-bold">Numero</label>
               <div class="input-group mb-3">
                 <input type="number" class="form-control" name="civico_s_op" placeholder="Numero" />
               </div>
@@ -377,7 +377,7 @@
             <!-- CAP  -->
             <div class="col">
               <div class="col-12 col-md">
-                <label for="basic-url" class="form-label fw-bold">CAP *</label>
+                <label for="basic-url" class="form-label fw-bold">CAP </label>
                 <div class="input-group mb-3">
                   <input type="number" class="form-control" name="cap_s_op" placeholder="CAP" />
                 </div>
@@ -393,7 +393,7 @@
         <div class="col-12 col-md">
 
           <!-- città -->
-          <label for="citta" class="form-label fw-bold">Città*</label>
+          <label for="citta" class="form-label fw-bold">Città</label>
           <div class="input-group mb-3">
             <input id="citta" type="text" class="form-control" name="citta_s_op" placeholder="citta" />
           </div>
@@ -403,7 +403,7 @@
         <div class="col-12 col-md">
 
           <!-- PROVINCIA  -->
-          <label for="basic-url" class="form-label fw-bold">Provincia *</label>
+          <label for="basic-url" class="form-label fw-bold">Provincia </label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="provincia_s_op" placeholder="Provincia" />
           </div>
@@ -425,16 +425,16 @@
           <div class="row">
             <div class="col">
               <!-- via -->
-              <label for="nome_founder_1" class="form-label fw-bold">Nome*</label>
+              <label for="nome_founder_1" class="form-label fw-bold">Nome *</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="nome_founder_1" placeholder="Nome" />
+                <input type="text" class="form-control" name="nome_founder_1" placeholder="Nome" required />
               </div>
             </div>
             <div class="col">
               <!-- città -->
               <label for="cognome_founder" class="form-label fw-bold">Cognome*</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="cognome_founder_1" placeholder="Cognome" />
+                <input type="text" class="form-control" name="cognome_founder_1" placeholder="Cognome" required />
               </div>
             </div>
           </div>
@@ -443,7 +443,7 @@
           <div class="row">
             <div class="col">
               <label for="tel_founder_1" class="form-label fw-bold">
-                Numero di telefono*
+                Numero di telefono
               </label>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" name="tel_founder_1" placeholder="Numero" />
@@ -453,7 +453,7 @@
             <div class="col">
               <label for="email_founder_1" class="form-label fw-bold">Email *</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="email_founder_1" placeholder="CAP" />
+                <input type="text" class="form-control" name="email_founder_1" placeholder="CAP" required />
               </div>
             </div>
           </div>
@@ -500,7 +500,7 @@
         <div class="col-12 col-md">
           <!-- N° Dipendenti 12/2022 -->
           <label for="n_dipendenti_2022" class="form-label fw-bold">
-            Numero Dipendenti (Dicembre 2022)*
+            Numero Dipendenti (Dicembre 2022)
           </label>
           <div class="input-group mb-3">
             <input type="number" class="form-control" name="n_dipendenti_2022" placeholder="Numero Dipendenti 2022" />
@@ -509,7 +509,7 @@
         <div class="col-12 col-md">
           <!-- N° Dipendenti 12/2023 -->
           <label for="n_dipendenti_2023" class="form-label fw-bold">
-            Numero Dipendenti (Dipendenti 2023)*
+            Numero Dipendenti (Dipendenti 2023)
           </label>
           <div class="input-group mb-3">
             <input type="number" class="form-control" name="n_dipendenti_2023" placeholder="Numero Dipendenti 2023" />
@@ -520,7 +520,7 @@
       <!-- stato di vita - numero di round raccolti  -->
       <div class="row">
         <div class="col-12 col-md">
-          <label for="stato_di_vita" class="form-label fw-bold">Stato di Vita*</label>
+          <label for="stato_di_vita" class="form-label fw-bold">Stato di Vita</label>
           <div class="input-group mb-3">
             <select class="form-control" name="status_di_vita">
               <option selected value="0">. . .</option>
@@ -535,8 +535,8 @@
             Numero di round di raccolta
           </label>
           <div class="input-group mb-3">
-            <input type="number" class="form-control" name="n_round_raccolta"
-              placeholder="Numeri di round di raccolta" />
+            <input type="number" class="form-control" name="n_round_raccolta" placeholder="Numeri di round di raccolta"
+              required />
           </div>
         </div>
       </div>
@@ -592,8 +592,8 @@
         <div class="col-12 col-md">
           <label for="status" class="form-label fw-bold">Status*</label>
           <div class="input-group mb-3">
-            <select type="text" class="form-control" name="status" placeholder="Numero">
-              <option selected value="0">...</option>
+            <select type="text" class="form-control" name="status" placeholder="Numero" required>
+              <option selected disabled value="">...</option>
               <option value="1">1</option>
               <option value="2">2</option>
             </select>
@@ -639,7 +639,7 @@
         <div class="col-12 col-md">
           <label for="revenueY1salses" class="form-label fw-bold">RevenueY1salses*</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="revenueY1salses" placeholder="Inserisci un valore" />
+            <input type="text" class="form-control" name="revenueY1salses" placeholder="Inserisci un valore" required />
           </div>
         </div>
       </div>
@@ -650,7 +650,7 @@
         <div class="col-12 col-md">
           <label for="revenueY3salses" class="form-label fw-bold">RevenueY3salses</label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="revenueY3salses" placeholder="Inserisci un valore" />
+            <input type="text" class="form-control" name="revenueY3salses" placeholder="Inserisci un valore" required />
           </div>
         </div>
 
@@ -658,7 +658,7 @@
         <div class="col-12 col-md">
           <label for="EbidtaY1" class="form-label fw-bold">EbidtaY1</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="EbidtaY1" placeholder="Inserisci un valore" />
+            <input type="text" class="form-control" name="EbidtaY1" placeholder="Inserisci un valore" required />
           </div>
         </div>
       </div>
@@ -669,7 +669,7 @@
         <div class="col-12 col-md">
           <label for="EbidtaY3" class="form-label fw-bold">EbidtaY3</label>
           <div class="input-group mb-3 gap-2">
-            <input type="text" class="form-control" name="EbidtaY3" placeholder="Inserisci un valore" />
+            <input type="text" class="form-control" name="EbidtaY3" placeholder="Inserisci un valore" required />
           </div>
         </div>
 
@@ -679,7 +679,8 @@
             Settore Industriale
           </label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="settore_industriale" placeholder="Inserisci un valore" />
+            <input type="text" class="form-control" name="settore_industriale" placeholder="Inserisci un valore"
+              required />
           </div>
         </div>
       </div>
@@ -692,8 +693,8 @@
           </label>
           <div class="input-group mb-3 gap-2">
             <!-- <input type="text" class="form-control" name="area_terapeutica" placeholder="Inserisci un valore" /> -->
-            <select type="text" class="form-control" name="area_terapeutica">
-              <option selected value="0">. . .</option>
+            <select type="text" class="form-control" name="area_terapeutica" required>
+              <option selected disabled value="">. . .</option>
               <option value="1">1</option>
               <option value="2">2</option>
             </select>
@@ -710,18 +711,18 @@
         <div class="col-12 col-md">
           <!-- Tipologia di prodotto -->
           <label for="tipologia_prodotto" class="form-label fw-bold">
-            Tipologia di prodotto*
+            Tipologia di prodotto *
           </label>
           <div class="input-group mb-3 gap-2">
-            <select type="text" class="form-control" name="tipologia_prodotto">
-              <option selected value="0">. . .</option>
+            <select type="text" class="form-control" name="tipologia_prodotto" required>
+              <option selected disabled value="">. . .</option>
               <option value="1">1</option>
               <option value="2">2</option>
             </select>
           </div>
 
           <!-- se Medtech -->
-          <label for="se_Medtech" class="form-label fw-bold">se Medtech*</label>
+          <label for="se_Medtech" class="form-label fw-bold">se Medtech</label>
           <div class="input-group mb-3 gap-2">
             <select type="text" class="form-control" name="se_Medtech">
               <option selected value="0">. . .</option>
@@ -756,7 +757,7 @@
         <!-- altro(specificare) - fda approved - emea approved - fda approved - ce approved -->
         <div class="col">
           <label class="form-label fw-bold">Altro(Specificare)*</label>
-          <textarea class="form-control mb-3" name="altro" rows="6"></textarea>
+          <textarea class="form-control mb-3" name="altro" rows="6" required></textarea>
 
           <!-- FDA - EMEA  -->
           <div class="row">
@@ -820,7 +821,7 @@
         <div class="col">
           <!-- mercato -->
 
-          <div class="input-group mb-3">
+          <div class="input-group mb-3 required">
             <div class="me-5">
               <input type="checkbox" class="form-check-input" name="mercato" placeholder="Inserisci un valore" /><label
                 class="form-label ms-2" value="US">US</label>
@@ -875,7 +876,7 @@
             Paese in cui è distribuito
           </label>
           <select type="text" class="form-control" name="paese_distribuito">
-            <option selected value="0">. . .</option>
+            <option selected disabled value="">. . .</option>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
@@ -954,7 +955,7 @@
           <label for="business_model" class="form-label fw-bold">
             Business model*
           </label>
-          <select type="text" class="form-control" name="business_model" reuired>
+          <select type="text" class="form-control" name="business_model" required>
             <option selected value="0">. . .</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -966,10 +967,10 @@
           <label for="brevetti" class="form-label fw-bold">Brevetti*</label>
           <div class="input-group mb-3 gap-2">
             <input type="radio" class="form-check-input rounded-circle" name="brevetti" value="si"
-              style="width: 1.2rem; height: 1.2rem" />
+              style="width: 1.2rem; height: 1.2rem" required />
             <label class="form-label m-0">si</label>
             <input type="radio" class="form-check-input rounded-circle" name="brevetti" value="no"
-              style="width: 1.2rem; height: 1.2rem" />
+              style="width: 1.2rem; height: 1.2rem" required />
             <label class="form-label m-0">no</label>
           </div>
         </div>
@@ -986,9 +987,9 @@
         <div class="col">
           <div class="mb-3">
             <label for="logo" class="form-label fw-bold">
-              One Page *
+              One Page * <span class="fw-light">richiesto</span>
             </label>
-            <input type="file" name="one_page" class="filepond " id="one-page" data-max-files="10" required />
+            <input type="file" name="one_page" class="filepond " id="one-page" required />
           </div>
         </div>
       </div>
@@ -996,9 +997,9 @@
         <div class="col">
           <div class="mb-3">
             <label for="logo" class="form-label fw-bold">
-              Deck *
+              Deck * <span class="fw-light">richiesto</span>
             </label>
-            <input type="file" name="deck" class="filepond" id="deck" />
+            <input type="file" name="deck" class="filepond" id="deck" required />
           </div>
         </div>
       </div>
@@ -1006,9 +1007,9 @@
         <div class="col">
           <div class="mb-3">
             <label for="logo" class="form-label fw-bold">
-              Business Plan *
+              Business Plan * <span class="fw-light">richiesto</span>
             </label>
-            <input type="file" name="business_plan" class=" filepond" id="business-plan" />
+            <input type="file" name="business_plan" class=" filepond" id="business-plan" required />
           </div>
         </div>
       </div>

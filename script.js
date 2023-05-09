@@ -14,7 +14,7 @@ function countChar(val) {
 $(document).ready(function () {
   let step = 1;
   var current;
-
+  let submit = false;
   $("#step-icon-mobile").text(step);
 
   $("html, body").scrollTop(0);
@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
   }
 
-  // $(".slide:not(:nth(0))").hide();
+  $(".slide:not(:nth(0))").hide();
   $("#prev").hide();
 
   $("#prev").click(handleButtonClickPrev);
@@ -76,33 +76,33 @@ $(document).ready(function () {
 
     //seleziono la slide successiva per poi togliere lo sfondo blu sui numeri dei vari step
     var next = current.next(".slide");
-
-    // tolgo lo sfondo blu ai numeri
-    if (current.index() == 3) {
-      $(".step-icon:nth(4)").removeClass("bg-blue-mr");
-      $(".step-icon:nth(4)").addClass("bg-light-grey");
-      $(".bar:nth(3)").removeClass("bg-blue-mr");
-      $(".bar:nth(3)").addClass("bg-light-grey");
+    if (!submit) {
+      // tolgo lo sfondo blu ai numeri
+      if (current.index() == 3) {
+        $(".step-icon:nth(4)").removeClass("bg-blue-mr");
+        $(".step-icon:nth(4)").addClass("bg-light-grey");
+        $(".bar:nth(3)").removeClass("bg-blue-mr");
+        $(".bar:nth(3)").addClass("bg-light-grey");
+      }
+      if (current.index() == 2) {
+        $(".step-icon:nth(3)").removeClass("bg-blue-mr");
+        $(".step-icon:nth(3)").addClass("bg-light-grey");
+        $(".bar:nth(2)").removeClass("bg-blue-mr");
+        $(".bar:nth(2)").addClass("bg-light-grey");
+      }
+      if (current.index() == 1) {
+        $(".step-icon:nth(2)").removeClass("bg-blue-mr");
+        $(".step-icon:nth(2)").addClass("bg-light-grey");
+        $(".bar:nth(1)").removeClass("bg-blue-mr");
+        $(".bar:nth(1)").addClass("bg-light-grey");
+      }
+      if (current.index() == 0) {
+        $(".step-icon:nth(1)").removeClass("bg-blue-mr");
+        $(".step-icon:nth(1)").addClass("bg-light-grey");
+        $(".bar:nth(0)").removeClass("bg-blue-mr");
+        $(".bar:nth(0)").addClass("bg-light-grey");
+      }
     }
-    if (current.index() == 2) {
-      $(".step-icon:nth(3)").removeClass("bg-blue-mr");
-      $(".step-icon:nth(3)").addClass("bg-light-grey");
-      $(".bar:nth(2)").removeClass("bg-blue-mr");
-      $(".bar:nth(2)").addClass("bg-light-grey");
-    }
-    if (current.index() == 1) {
-      $(".step-icon:nth(2)").removeClass("bg-blue-mr");
-      $(".step-icon:nth(2)").addClass("bg-light-grey");
-      $(".bar:nth(1)").removeClass("bg-blue-mr");
-      $(".bar:nth(1)").addClass("bg-light-grey");
-    }
-    if (current.index() == 0) {
-      $(".step-icon:nth(1)").removeClass("bg-blue-mr");
-      $(".step-icon:nth(1)").addClass("bg-light-grey");
-      $(".bar:nth(0)").removeClass("bg-blue-mr");
-      $(".bar:nth(0)").addClass("bg-light-grey");
-    }
-
     //se non ci sono slide prima di quella corrente nascondo il pulsante indietro
     if (current.prev(".slide").length === 0) {
       $("#prev").hide();
@@ -124,26 +124,23 @@ $(document).ready(function () {
 
     $("#myForm").validate({
       // Personalizza i messaggi di errore
-      messages: {
-        name: "Please enter your name",
-        email: {
-          required: "Please enter your email address",
-          email: "Please enter a valid email address",
-        },
-        password: "Please enter a password",
-      },
-      // Personalizza le classi CSS per gli errori
-      errorClass: "is-invalid",
-      validClass: "is-valid",
-      // Personalizza la gestione dell'evento submit
-      submitHandler: function (form) {
-        // Fai qualcosa qui, ad esempio invia il form
-        form.submit();
+      errorPlacement: function (error, element) {
+        // Non fare nulla
       },
     });
 
     if ($("form").valid()) {
+      console.log("inviato");
+      handleButtonClickNext();
+      setTimeout(function () {
+        $("#myForm").submit();
+      }, 2000);
     } else {
+      $(".slide").hide();
+      $(".slide:first").show();
+      $("#next").show();
+      step = 1;
+      submit = true;
       $("form").addClass("was-validated");
     }
 
