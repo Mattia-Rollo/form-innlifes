@@ -1,15 +1,18 @@
-// funzione che conta caratteri nel textarea
-function countChar(val) {
-  var len = val.value.length;
-  //   console.log(len);
+(function ($) {
+  "use strict";
 
-  if (len >= 600) {
-    val.value = val.value.substring(0, 600);
-  } else {
-    $("#charNum").text(600 - len);
-    $("#charNum-text").text("Caratteri rimanenti");
-  }
-}
+// funzione che conta caratteri nel textarea
+// function countChar(val) {
+//   var len = val.value.length;
+//   //   console.log(len);
+
+//   if (len >= 600) {
+//     val.value = val.value.substring(0, 600);
+//   } else {
+//     $("#charNum").text(600 - len);
+//     $("#charNum-text").text("Caratteri rimanenti");
+//   }
+// }
 
 $(document).ready(function () {
   let step = 1;
@@ -48,6 +51,7 @@ $(document).ready(function () {
   $("#prev").hide();
 
   $("#prev").click(handleButtonClickPrev);
+  //pulsante indietro slide 5
   $("#prev-last").click(handleButtonClickPrev);
 
   // funzione per gestire il bottone INDIETRO
@@ -71,11 +75,12 @@ $(document).ready(function () {
     prev.fadeIn("slow");
 
     $("html, body").scrollTop(0);
-    //ora la slide precedente diventa quella corrente
+    //rimposto la slide visibile con quella corrente
     current = $(".slide:visible");
 
     //seleziono la slide successiva per poi togliere lo sfondo blu sui numeri dei vari step
     var next = current.next(".slide");
+    //cambio il colore dei vari step solo se il tasto invio non è stato schiacciato almeno una volta
     if (!submit) {
       // tolgo lo sfondo blu ai numeri
       if (current.index() == 3) {
@@ -103,46 +108,50 @@ $(document).ready(function () {
         $(".bar:nth(0)").addClass("bg-light-grey");
       }
     }
-    //se non ci sono slide prima di quella corrente nascondo il pulsante indietro
-    if (current.prev(".slide").length === 0) {
+    //nascondo il pulsante indietro alla prima slide
+    if (current.index() === 0) {
       $("#prev").hide();
-    }
-
-    //se ci sono slide successive a quella corrente mostro il pulsante next
-    if (current.next(".slide").length !== 0) {
+    }else{
+      $("#prev").show();
+      //mostro il pulsante avanti se è nascosto
       $("#next").show();
     }
 
-    if (current.index() === 3) {
-      $("#prev").show();
-    }
   }
 
   $("#next").click(handleButtonClickNext);
-  $("#submit").click(function (e) {
-    e.preventDefault();
+  $("#submit").on("click", function (event) {
 
-    $("#myForm").validate({
-      // Personalizza i messaggi di errore
-      errorPlacement: function (error, element) {
-        // Non fare nulla
-      },
-    });
+  event.preventDefault();
+  // console.log($("#myForm"));
+  // confirm("invio");
 
-    if ($("form").valid()) {
-      console.log("inviato");
-      handleButtonClickNext();
-      setTimeout(function () {
-        $("#myForm").submit();
-      }, 2000);
-    } else {
-      $(".slide").hide();
-      $(".slide:first").show();
-      $("#next").show();
-      step = 1;
-      submit = true;
-      $("form").addClass("was-validated");
-    }
+  $("#myForm").submit();
+    
+    
+    
+
+    // $("#myForm").validate({
+    //   // Personalizza i messaggi di errore
+    //   errorPlacement: function (error, element) {
+    //     // Non fare nulla
+    //   },
+    // });
+
+    // if ($("#myForm").valid()) {
+    //   // console.log("inviato");
+    //   handleButtonClickNext();
+    //   setTimeout(function () {
+    //     $("#myForm").submit();
+    //   }, 2000);
+    // } else {
+    //   $(".slide").hide();
+    //   $(".slide:first").show();
+    //   $("#next").show();
+    //   step = 1;
+    //   submit = true;
+    //   $("form").addClass("was-validated");
+    // }
 
     // Swal.fire({
     //   title: "Sicuro di voler inviare i dati?",
@@ -242,7 +251,7 @@ $(document).ready(function () {
     }
   }
 
-  //   funzione per l'aggiunta di un nuovo founder al click del pulsante
+  // variabili e funzioni per l'aggiunta di un nuovo founder al click del pulsante
   let id_founder = 2;
   const btn_aggiungi = $("#btn_aggiungi");
   const btn_rimuovi = $("#btn_rimuovi");
@@ -306,3 +315,5 @@ $(document).ready(function () {
     $(".founder").length == 1 ? btn_rimuovi.hide() : null;
   });
 });
+
+})(jQuery);
