@@ -19,9 +19,8 @@
     var current;
     let submit = false;
 
-    setHeaderMobileMenu(1);
-    function setHeaderMobileMenu(step) {
-      switch (step) {
+    function setHeaderMobileMenu() {
+      switch (stepMobile) {
         case 1:
           $("#step-title-mobile").text("Informazioni");
           break;
@@ -43,7 +42,7 @@
         default:
           break;
       }
-      $("#step-icon-mobile").text(step);
+      $("#step-icon-mobile").text(stepMobile);
     }
 
     //all'avvio nascondo slides + indietro
@@ -243,6 +242,7 @@
     let id_founder = 2;
     const btn_aggiungi = $("#btn_aggiungi");
     const btn_rimuovi = $("#btn_rimuovi");
+
     btn_rimuovi.hide();
 
     $("#btn_aggiungi").click(function () {
