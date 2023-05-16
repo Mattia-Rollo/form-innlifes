@@ -15,14 +15,12 @@
   // }
 
   $(document).ready(function () {
-    let step = 1;
+    let stepMobile = 1;
     var current;
     let submit = false;
-    $("#step-icon-mobile").text(step);
 
-    $("html, body").scrollTop(0);
-
-    function setHeaderMobileMenu() {
+    setHeaderMobileMenu(1);
+    function setHeaderMobileMenu(step) {
       switch (step) {
         case 1:
           $("#step-title-mobile").text("Informazioni");
@@ -45,67 +43,65 @@
         default:
           break;
       }
+      $("#step-icon-mobile").text(step);
     }
 
+    //all'avvio nascondo slides + indietro
     $(".slide:not(:nth(0))").hide();
     $("#prev").hide();
+    $("#step-icon-mobile").text(stepMobile);
+    $("html, body").scrollTop(0);
 
+    //bottoni indietro + l'ultimo "indietro"
     $("#prev").click(handleButtonClickPrev);
-    //pulsante indietro slide 5
     $("#prev-last").click(handleButtonClickPrev);
 
-    // funzione per gestire il bottone INDIETRO
     function handleButtonClickPrev() {
-      step--;
-      $("#step-icon-mobile").text(step);
-
+      //menu mobile indietro
+      stepMobile--;
       setHeaderMobileMenu();
 
-      //torna in alto al click del pulsante avanti
-
-      //seleziono la slide visibile
+      //cambio slide
       current = $(".slide:visible");
-
-      //seleziono la slide precedente <--
       var prev = current.prev(".slide");
-
-      // nascondo quella visibile
       current.hide();
-      //mostro quella precedente <--
       prev.fadeIn("slow");
-
       $("html, body").scrollTop(0);
+
       //rimposto la slide visibile con quella corrente
       current = $(".slide:visible");
 
-      //seleziono la slide successiva per poi togliere lo sfondo blu sui numeri dei vari step
-      var next = current.next(".slide");
       //cambio il colore dei vari step solo se il tasto invio non è stato schiacciato almeno una volta
       if (!submit) {
-        // tolgo lo sfondo blu ai numeri
-        if (current.index() == 3) {
-          $(".step-icon:nth(4)").removeClass("bg-blue-mr");
-          $(".step-icon:nth(4)").addClass("bg-light-grey");
-          $(".bar:nth(3)").removeClass("bg-blue-mr");
-          $(".bar:nth(3)").addClass("bg-light-grey");
-        }
-        if (current.index() == 2) {
-          $(".step-icon:nth(3)").removeClass("bg-blue-mr");
-          $(".step-icon:nth(3)").addClass("bg-light-grey");
-          $(".bar:nth(2)").removeClass("bg-blue-mr");
-          $(".bar:nth(2)").addClass("bg-light-grey");
-        }
-        if (current.index() == 1) {
-          $(".step-icon:nth(2)").removeClass("bg-blue-mr");
-          $(".step-icon:nth(2)").addClass("bg-light-grey");
-          $(".bar:nth(1)").removeClass("bg-blue-mr");
-          $(".bar:nth(1)").addClass("bg-light-grey");
-        }
-        if (current.index() == 0) {
-          $(".step-icon:nth(1)").removeClass("bg-blue-mr");
-          $(".step-icon:nth(1)").addClass("bg-light-grey");
-          $(".bar:nth(0)").removeClass("bg-blue-mr");
-          $(".bar:nth(0)").addClass("bg-light-grey");
+        // tolgo lo sfondo blu ai numeri nel header
+        switch (current.index()) {
+          case 3:
+            $(".step-icon:nth(4)").removeClass("bg-blue-mr");
+            $(".step-icon:nth(4)").addClass("bg-light-grey");
+            $(".bar:nth(3)").removeClass("bg-blue-mr");
+            $(".bar:nth(3)").addClass("bg-light-grey");
+            break;
+          case 2:
+            $(".step-icon:nth(3)").removeClass("bg-blue-mr");
+            $(".step-icon:nth(3)").addClass("bg-light-grey");
+            $(".bar:nth(2)").removeClass("bg-blue-mr");
+            $(".bar:nth(2)").addClass("bg-light-grey");
+            break;
+          case 1:
+            $(".step-icon:nth(2)").removeClass("bg-blue-mr");
+            $(".step-icon:nth(2)").addClass("bg-light-grey");
+            $(".bar:nth(1)").removeClass("bg-blue-mr");
+            $(".bar:nth(1)").addClass("bg-light-grey");
+            break;
+          case 0:
+            $(".step-icon:nth(1)").removeClass("bg-blue-mr");
+            $(".step-icon:nth(1)").addClass("bg-light-grey");
+            $(".bar:nth(0)").removeClass("bg-blue-mr");
+            $(".bar:nth(0)").addClass("bg-light-grey");
+            break;
+
+          default:
+            break;
         }
       }
       //nascondo il pulsante indietro alla prima slide
@@ -118,6 +114,7 @@
       }
     }
 
+    //bottoni avanti + l'ultimo "avanti"
     $("#next").click(handleButtonClickNext);
     $("button[type='submit']").on("click", function (event) {
       event.preventDefault();
@@ -169,76 +166,72 @@
       });
     });
 
-    // funzione per gestire bottone AVANTI
     function handleButtonClickNext() {
-      step++;
+      stepMobile++;
+      setHeaderMobileMenu();
 
-      //seleziono slide visibile / corrente
+      //cambio slide
       current = $(".slide:visible");
-      //seleziono quella successiva
       var next = current.next(".slide");
-
-      //switcho
       current.hide();
       next.fadeIn("slow");
       $("html, body").scrollTop(0);
 
-      //riseleziono quella visibile dopo che è cambiata
+      //riseleziono quella visibile
       current = $(".slide:visible");
 
-      // console.log(current);
+      // applico lo sfondo blu agli step
+      switch (current.index()) {
+        case 0:
+          $("#prev").hide();
+          break;
 
-      $("#step-icon-mobile").text(step);
+        case 1:
+          $(".bar:nth(0)").removeClass("bg-light-grey");
+          $(".bar:nth(0)").addClass("bg-blue-mr");
+          $(".step-icon:nth(1)").removeClass("bg-light-grey");
+          $(".step-icon:nth(1)").addClass("bg-blue-mr");
+          break;
 
-      setHeaderMobileMenu();
-      // applico lo sfondo blu ai numeri step
-      if (current.index() == 1) {
-        //   console.log(current.index());
+        case 2:
+          $(".bar:nth(1)").removeClass("bg-light-grey");
+          $(".bar:nth(1)").addClass("bg-blue-mr");
+          $(".step-icon:nth(2)").removeClass("bg-light-grey");
+          $(".step-icon:nth(2)").addClass("bg-blue-mr");
+          break;
 
-        $(".bar:nth(0)").removeClass("bg-light-grey");
-        $(".bar:nth(0)").addClass("bg-blue-mr");
-        $(".step-icon:nth(1)").removeClass("bg-light-grey");
-        $(".step-icon:nth(1)").addClass("bg-blue-mr");
-      }
-      if (current.index() == 2) {
-        $(".bar:nth(1)").removeClass("bg-light-grey");
-        $(".bar:nth(1)").addClass("bg-blue-mr");
-        $(".step-icon:nth(2)").removeClass("bg-light-grey");
-        $(".step-icon:nth(2)").addClass("bg-blue-mr");
-      }
-      if (current.index() == 3) {
-        $(".step-icon:nth(3)").removeClass("bg-light-grey");
-        $(".step-icon:nth(3)").addClass("bg-blue-mr");
-        $(".bar:nth(2)").removeClass("bg-light-grey");
-        $(".bar:nth(2)").addClass("bg-blue-mr");
-      }
-      if (current.index() == 4) {
-        $(".step-icon:nth(4)").removeClass("bg-light-grey");
-        $(".step-icon:nth(4)").addClass("bg-blue-mr");
-        $(".bar:nth(3)").removeClass("bg-light-grey");
-        $(".bar:nth(3)").addClass("bg-blue-mr");
-      }
-      if (current.index() == 5) {
-        $(".step-icon:nth(5)").removeClass("bg-light-grey");
-        $(".step-icon:nth(5)").addClass("bg-blue-mr");
-        $(".bar:nth(4)").removeClass("bg-light-grey");
-        $(".bar:nth(4)").addClass("bg-blue-mr");
-      }
-      if (current.index() == 6) {
-        $("#header-mobile").hide();
+        case 3:
+          $(".step-icon:nth(3)").removeClass("bg-light-grey");
+          $(".step-icon:nth(3)").addClass("bg-blue-mr");
+          $(".bar:nth(2)").removeClass("bg-light-grey");
+          $(".bar:nth(2)").addClass("bg-blue-mr");
+          break;
+
+        case 4:
+          $(".step-icon:nth(4)").removeClass("bg-light-grey");
+          $(".step-icon:nth(4)").addClass("bg-blue-mr");
+          $(".bar:nth(3)").removeClass("bg-light-grey");
+          $(".bar:nth(3)").addClass("bg-blue-mr");
+          break;
+
+        case 5:
+          $(".step-icon:nth(5)").removeClass("bg-light-grey");
+          $(".step-icon:nth(5)").addClass("bg-blue-mr");
+          $(".bar:nth(4)").removeClass("bg-light-grey");
+          $(".bar:nth(4)").addClass("bg-blue-mr");
+          break;
+
+        case 6:
+          $("#header-mobile").hide();
+          break;
+
+        default:
+          break;
       }
 
       //nascondo i pulsanti nelle seguenti condizioni
-      if (current.index() === 0) {
-        $("#prev").hide();
-      }
-
       if (current.index() !== 0) {
         $("#prev").show();
-      }
-
-      if (next.next(".slide").length === 0) {
-        $("#next").hide();
       }
       if (current.index() >= 4) {
         $("#next").hide();
@@ -250,7 +243,6 @@
     let id_founder = 2;
     const btn_aggiungi = $("#btn_aggiungi");
     const btn_rimuovi = $("#btn_rimuovi");
-
     btn_rimuovi.hide();
 
     $("#btn_aggiungi").click(function () {
